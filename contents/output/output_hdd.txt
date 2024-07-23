@@ -1,0 +1,776 @@
+Name: hdd
+
+
+----contents/
+    |----Dometrain_Deep_Dive_Domain-Driven_Design_2024-5.part1_Downloadly.ir.rar
+    |----Dometrain_Deep_Dive_Domain-Driven_Design_2024-5.part2_Downloadly.ir.rar
+    |----Dometrain_Getting_Started_Domain-Driven_Design_2024-5.part1_Downloadly.ir.rar
+    |----Dometrain_Getting_Started_Domain-Driven_Design_2024-5.part2_Downloadly.ir.rar
+    |----ppp/
+    |    |----Pluralsight_Extending_Windows_PowerShell_2024-1_Downloadly.ir/
+    |    |    |----Pluralsight - Extending Windows PowerShell 2024-1/
+    |    |    |    |----1. Course Overview/
+    |    |    |    |    |----1. Course Overview.mp4
+    |    |    |    |----2. Extending Windows PowerShell Fundamentals/
+    |    |    |    |    |----1. Course Introduction.mp4
+    |    |    |    |    |----2. Packaging PowerShell Terminology.mp4
+    |    |    |    |    |----3. Introduction to Repositories.mp4
+    |    |    |    |    |----4. Updating Windows PowerShell.mp4
+    |    |    |    |    |----5. Demo Updating PowerShellGet.mp4
+    |    |    |    |    |----6. Using PSResourceGet Commands.mp4
+    |    |    |    |    |----7. Repositories and the PowerShell Gallery.mp4
+    |    |    |    |    |----8. Module Summary.mp4
+    |    |    |    |----3. Using Windows PowerShell Modules/
+    |    |    |    |    |----1. Listing Windows PowerShell Modules.mp4
+    |    |    |    |    |----10. Summary.mp4
+    |    |    |    |    |----2. Windows PowerShell Module Fundamentals.mp4
+    |    |    |    |    |----3. Managing Modules with PSResourceGet.mp4
+    |    |    |    |    |----4. Demo Discovering Windows PowerShell Modules.mp4
+    |    |    |    |    |----5. Demo Installing Windows PowerShell Modules.mp4
+    |    |    |    |    |----6. Demo Updating Windows PowerShell Modules.mp4
+    |    |    |    |    |----7. Demo Uninstalling Windows PowerShell Modules.mp4
+    |    |    |    |    |----8. Demo Offline Module Management.mp4
+    |    |    |    |    |----9. Demo Exploring the PowerShell Gallery.mp4
+    |    |    |    |----4. Using PowerShell Gallery Scripts/
+    |    |    |    |    |----1. PowerShell Gallery Scripts.mp4
+    |    |    |    |    |----2. Configuring PowerShell Execution Policy.mp4
+    |    |    |    |    |----3. Using Script Resources.mp4
+    |    |    |    |    |----4. Demo Using PowerShell Gallery Scripts.mp4
+    |    |    |    |    |----5. Summary.mp4
+    |    |    |    |----5. Managing PowerShell Repositories/
+    |    |    |    |    |----1. Understanding PowerShell Repositories.mp4
+    |    |    |    |    |----2. Managing PowerShell Repositories.mp4
+    |    |    |    |    |----3. Internal Repositories.mp4
+    |    |    |    |    |----4. Demo Creating an Internal Repository.mp4
+    |    |    |    |    |----5. Demo Re-publishing Modules to an Internal Repository.mp4
+    |    |    |    |    |----6. Re-publishing Scripts to an Internal Repository.mp4
+    |    |    |    |    |----7. Module Summary.mp4
+    |    |    |    |    |----8. Course Summary.mp4
+    |    |    |    |----Read me.txt
+    |    |    |    |----windows-powershell-extending.zip
+    |    |----Pluralsight_Managing_with_Windows_PowerShell_and_WMI_2024-3_Downloadly.ir/
+    |    |    |----Pluralsight - Managing with Windows PowerShell and WMI 2024-3/
+    |    |    |    |----1. Course Overview/
+    |    |    |    |    |----1. Course Overview.mp4
+    |    |    |    |    |----1. Course Overview.vtt
+    |    |    |    |----2. Introduction to WMI and CIM/
+    |    |    |    |    |----1. It’s All a Big Database.mp4
+    |    |    |    |    |----1. It’s All a Big Database.vtt
+    |    |    |    |    |----2. Accessing the Big Database.mp4
+    |    |    |    |    |----2. Accessing the Big Database.vtt
+    |    |    |    |    |----3. Module Recap.mp4
+    |    |    |    |    |----3. Module Recap.vtt
+    |    |    |    |----3. Exploring CIM with PowerShell/
+    |    |    |    |    |----1. Exploring CIM Classes.mp4
+    |    |    |    |    |----1. Exploring CIM Classes.vtt
+    |    |    |    |    |----2. Digging Deeper into Classes with Instances.mp4
+    |    |    |    |    |----2. Digging Deeper into Classes with Instances.vtt
+    |    |    |    |    |----3. Accessing Remote System Information with CIM.mp4
+    |    |    |    |    |----3. Accessing Remote System Information with CIM.vtt
+    |    |    |    |    |----4. Building the Compatibility Checker Script.mp4
+    |    |    |    |    |----4. Building the Compatibility Checker Script.vtt
+    |    |    |    |----4. Advanced Management with CIM/
+    |    |    |    |    |----1. CIM Sessions.mp4
+    |    |    |    |    |----1. CIM Sessions.vtt
+    |    |    |    |    |----2. CIM Associated Instances.mp4
+    |    |    |    |    |----2. CIM Associated Instances.vtt
+    |    |    |    |    |----3. CIM Methods.mp4
+    |    |    |    |    |----3. CIM Methods.vtt
+    |    |    |    |----5. Course Summary and Next Steps/
+    |    |    |    |    |----1. Wrapping Up.mp4
+    |    |    |    |    |----1. Wrapping Up.vtt
+    |    |    |    |----exercise.zip
+    |    |    |    |----playlist.m3u
+    |    |    |    |----Read me.txt
+    |    |----Pluralsight_The_Windows_PowerShell_Language_2023-3_Downloadly.ir/
+    |    |    |----Pluralsight - The Windows PowerShell Language 2023-3/
+    |    |    |    |----04. Using Arrays and Hash Tables/
+    |    |    |    |    |----01. Using Arrays and Hash Tables.mp4
+    |    |    |    |    |----01. Using Arrays and Hash Tables.vtt
+    |    |    |    |    |----02. Array Fundamentals.mp4
+    |    |    |    |    |----02. Array Fundamentals.vtt
+    |    |    |    |    |----03. Demonstration - Array Fundamentals.mp4
+    |    |    |    |    |----03. Demonstration - Array Fundamentals.vtt
+    |    |    |    |    |----04. Demonstration - Working with Arrays in Windows PowerShell.mp4
+    |    |    |    |    |----04. Demonstration - Working with Arrays in Windows PowerShell.vtt
+    |    |    |    |    |----05. Demonstration - Splitting and Joining.mp4
+    |    |    |    |    |----05. Demonstration - Splitting and Joining.vtt
+    |    |    |    |    |----06. Demonstration - Doing More with Arrays.mp4
+    |    |    |    |    |----06. Demonstration - Doing More with Arrays.vtt
+    |    |    |    |    |----07. Hash Table Fundamentals.mp4
+    |    |    |    |    |----07. Hash Table Fundamentals.vtt
+    |    |    |    |    |----08. Demonstration - Hash Table Fundamentals.mp4
+    |    |    |    |    |----08. Demonstration - Hash Table Fundamentals.vtt
+    |    |    |    |    |----09. Demonstration - Hash Tables as Objects.mp4
+    |    |    |    |    |----09. Demonstration - Hash Tables as Objects.vtt
+    |    |    |    |    |----10. Demonstration - Splatting Hash Tables.mp4
+    |    |    |    |    |----10. Demonstration - Splatting Hash Tables.vtt
+    |    |    |    |    |----11. Demonstration - Hash Table Methods and Enumerators.mp4
+    |    |    |    |    |----11. Demonstration - Hash Table Methods and Enumerators.vtt
+    |    |    |    |    |----12. Demonstration - PSDefaultParameterValues.mp4
+    |    |    |    |    |----12. Demonstration - PSDefaultParameterValues.vtt
+    |    |    |    |    |----13. Key Take-aways.mp4
+    |    |    |    |    |----13. Key Take-aways.vtt
+    |    |    |    |----06. Working with Objects in Windows PowerShell/
+    |    |    |    |    |----01. Object Fundamentals.mp4
+    |    |    |    |    |----01. Object Fundamentals.vtt
+    |    |    |    |    |----02. Object Notation.mp4
+    |    |    |    |    |----02. Object Notation.vtt
+    |    |    |    |    |----03. Object Methods.mp4
+    |    |    |    |    |----03. Object Methods.vtt
+    |    |    |    |    |----04. Demonstration - Working with Objects.mp4
+    |    |    |    |    |----04. Demonstration - Working with Objects.vtt
+    |    |    |    |    |----05. Demonstration - Working with Object Type.mp4
+    |    |    |    |    |----05. Demonstration - Working with Object Type.vtt
+    |    |    |    |    |----06. Demonstration - Working with Dotted Notation.mp4
+    |    |    |    |    |----06. Demonstration - Working with Dotted Notation.vtt
+    |    |    |    |    |----07. Demonstration - Working with Object Static Methods.mp4
+    |    |    |    |    |----07. Demonstration - Working with Object Static Methods.vtt
+    |    |    |    |    |----08. Custom Properties and Objects.mp4
+    |    |    |    |    |----08. Custom Properties and Objects.vtt
+    |    |    |    |    |----09. Demonstration - Custom Properties with Select Object.mp4
+    |    |    |    |    |----09. Demonstration - Custom Properties with Select Object.vtt
+    |    |    |    |    |----10. Demonstration - Custom Objects.mp4
+    |    |    |    |    |----10. Demonstration - Custom Objects.vtt
+    |    |    |    |    |----11. Key Take-aways.mp4
+    |    |    |    |    |----11. Key Take-aways.vtt
+    |    |    |    |----07. Working with Strings, Dates, and Numbers/
+    |    |    |    |    |----01. Common Object Transformations.mp4
+    |    |    |    |    |----01. Common Object Transformations.vtt
+    |    |    |    |    |----02. Demonstration - Common Number Techniques.mp4
+    |    |    |    |    |----02. Demonstration - Common Number Techniques.vtt
+    |    |    |    |    |----03. Demonstration - Common String Methods.mp4
+    |    |    |    |    |----03. Demonstration - Common String Methods.vtt
+    |    |    |    |    |----04. Demonstration - Padding Strings.mp4
+    |    |    |    |    |----04. Demonstration - Padding Strings.vtt
+    |    |    |    |    |----05. Demonstration - Trimming Strings.mp4
+    |    |    |    |    |----05. Demonstration - Trimming Strings.vtt
+    |    |    |    |    |----06. Demonstration - String Replacement.mp4
+    |    |    |    |    |----06. Demonstration - String Replacement.vtt
+    |    |    |    |    |----07. Demonstration - Common Date Techniques.mp4
+    |    |    |    |    |----07. Demonstration - Common Date Techniques.vtt
+    |    |    |    |    |----08. Demonstration - Using TimeSpans.mp4
+    |    |    |    |    |----08. Demonstration - Using TimeSpans.vtt
+    |    |    |    |    |----09. Demonstration - Custom Format Operator.mp4
+    |    |    |    |    |----09. Demonstration - Custom Format Operator.vtt
+    |    |    |    |    |----10. Demonstration - Creating Custom Output.mp4
+    |    |    |    |    |----10. Demonstration - Creating Custom Output.vtt
+    |    |    |    |    |----11. Next Steps.mp4
+    |    |    |    |    |----11. Next Steps.vtt
+    |    |    |    |----1. Course Overview/
+    |    |    |    |    |----1. Course Overview.mp4
+    |    |    |    |    |----1. Course Overview.vtt
+    |    |    |    |----2. Using Variables with Windows PowerShell/
+    |    |    |    |    |----1. Course Intro.mp4
+    |    |    |    |    |----1. Course Intro.vtt
+    |    |    |    |    |----2. Variables Defined.mp4
+    |    |    |    |    |----2. Variables Defined.vtt
+    |    |    |    |    |----3. Variable Basics.mp4
+    |    |    |    |    |----3. Variable Basics.vtt
+    |    |    |    |    |----4. Variable cmdlets.mp4
+    |    |    |    |    |----4. Variable cmdlets.vtt
+    |    |    |    |    |----5. Demonstration - Variables in Action.mp4
+    |    |    |    |    |----5. Demonstration - Variables in Action.vtt
+    |    |    |    |    |----6. Demonstration - Using Variables in PowerShell.mp4
+    |    |    |    |    |----6. Demonstration - Using Variables in PowerShell.vtt
+    |    |    |    |    |----7. Variable Expansion.mp4
+    |    |    |    |    |----7. Variable Expansion.vtt
+    |    |    |    |    |----8. Demonstration - Variable Expansion.mp4
+    |    |    |    |    |----8. Demonstration - Variable Expansion.vtt
+    |    |    |    |    |----9. Other Variable Options.mp4
+    |    |    |    |    |----9. Other Variable Options.vtt
+    |    |    |    |----3. Using Common Windows PowerShell Operators/
+    |    |    |    |    |----1. Windows PowerShell Operators.mp4
+    |    |    |    |    |----1. Windows PowerShell Operators.vtt
+    |    |    |    |    |----2. Comparison Operators.mp4
+    |    |    |    |    |----2. Comparison Operators.vtt
+    |    |    |    |    |----3. Like and Match Operators.mp4
+    |    |    |    |    |----3. Like and Match Operators.vtt
+    |    |    |    |    |----4. Logical Operators.mp4
+    |    |    |    |    |----4. Logical Operators.vtt
+    |    |    |    |    |----5. Other Operators.mp4
+    |    |    |    |    |----5. Other Operators.vtt
+    |    |    |    |    |----6. Key Take-aways.mp4
+    |    |    |    |    |----6. Key Take-aways.vtt
+    |    |    |    |----5. Using Script Blocks in Windows PowerShell/
+    |    |    |    |    |----1. Introduction to Script Blocks.mp4
+    |    |    |    |    |----1. Introduction to Script Blocks.vtt
+    |    |    |    |    |----2. Script Block Basics.mp4
+    |    |    |    |    |----2. Script Block Basics.vtt
+    |    |    |    |    |----3. Script Block Parameters.mp4
+    |    |    |    |    |----3. Script Block Parameters.vtt
+    |    |    |    |    |----4. Script Blocks in Action.mp4
+    |    |    |    |    |----4. Script Blocks in Action.vtt
+    |    |    |    |    |----5. Key Take-aways.mp4
+    |    |    |    |    |----5. Key Take-aways.vtt
+    |    |    |    |----Read me.txt
+    |    |    |    |----windows-powershell-language.zip
+    |    |----_PowerShell_Jobs/
+    |    |    |----en/
+    |    |    |    |----04. Using Thread Jobs/
+    |    |    |    |    |----01. Introducing Thread Jobs.mp4
+    |    |    |    |    |----01. Introducing Thread Jobs.vtt
+    |    |    |    |    |----02. Demo - Thread Job Basics.mp4
+    |    |    |    |    |----02. Demo - Thread Job Basics.vtt
+    |    |    |    |    |----03. Demo - Using Thread Jobs.mp4
+    |    |    |    |    |----03. Demo - Using Thread Jobs.vtt
+    |    |    |    |    |----04. Demo - Thread Job Input.mp4
+    |    |    |    |    |----04. Demo - Thread Job Input.vtt
+    |    |    |    |    |----05. Demo - Thread Job Throttling.mp4
+    |    |    |    |    |----05. Demo - Thread Job Throttling.vtt
+    |    |    |    |    |----06. Demo - Thread Job Arguments.mp4
+    |    |    |    |    |----06. Demo - Thread Job Arguments.vtt
+    |    |    |    |    |----07. Demo - Thread Job Streaming Host.mp4
+    |    |    |    |    |----07. Demo - Thread Job Streaming Host.vtt
+    |    |    |    |    |----08. Demo - Scripting with Thread Job.mp4
+    |    |    |    |    |----08. Demo - Scripting with Thread Job.vtt
+    |    |    |    |    |----09. Comparing Job Tools.mp4
+    |    |    |    |    |----09. Comparing Job Tools.vtt
+    |    |    |    |    |----10. Module Summary.mp4
+    |    |    |    |    |----10. Module Summary.vtt
+    |    |    |    |----1. Course Overview/
+    |    |    |    |    |----1. Course Overview.mp4
+    |    |    |    |    |----1. Course Overview.vtt
+    |    |    |    |----2. Background Job Fundamentals/
+    |    |    |    |    |----1. Introduction and Requirements.mp4
+    |    |    |    |    |----1. Introduction and Requirements.vtt
+    |    |    |    |    |----2. Course Setup Notes.mp4
+    |    |    |    |    |----2. Course Setup Notes.vtt
+    |    |    |    |    |----3. Job Fundamentals.mp4
+    |    |    |    |    |----3. Job Fundamentals.vtt
+    |    |    |    |    |----4. Summary.mp4
+    |    |    |    |    |----4. Summary.vtt
+    |    |    |    |----3. Advanced Background Job Techniques/
+    |    |    |    |    |----1. Background Job Architecture.mp4
+    |    |    |    |    |----1. Background Job Architecture.vtt
+    |    |    |    |    |----2. Background Job Life Cycle.mp4
+    |    |    |    |    |----2. Background Job Life Cycle.vtt
+    |    |    |    |    |----3. Demo - Basic Background Job Management.mp4
+    |    |    |    |    |----3. Demo - Basic Background Job Management.vtt
+    |    |    |    |    |----4. Demo - Using Job Parameters.mp4
+    |    |    |    |    |----4. Demo - Using Job Parameters.vtt
+    |    |    |    |    |----5. Demo - Other Background Job Options.mp4
+    |    |    |    |    |----5. Demo - Other Background Job Options.vtt
+    |    |    |    |    |----6. Demo - Troubleshooting Background Jobs.mp4
+    |    |    |    |    |----6. Demo - Troubleshooting Background Jobs.vtt
+    |    |    |    |    |----7. Module Summary.mp4
+    |    |    |    |    |----7. Module Summary.vtt
+    |    |    |    |----5. PowerShell Scheduled Jobs/
+    |    |    |    |    |----1. Introducing PowerShell Scheduled Jobs.mp4
+    |    |    |    |    |----1. Introducing PowerShell Scheduled Jobs.vtt
+    |    |    |    |    |----2. Demo - Creating Scheduled Jobs.mp4
+    |    |    |    |    |----2. Demo - Creating Scheduled Jobs.vtt
+    |    |    |    |    |----3. Demo - Managing Scheduled Jobs.mp4
+    |    |    |    |    |----3. Demo - Managing Scheduled Jobs.vtt
+    |    |    |    |    |----4. Demo - A Practical Example.mp4
+    |    |    |    |    |----4. Demo - A Practical Example.vtt
+    |    |    |    |    |----5. Scheduled Job Recommendations.mp4
+    |    |    |    |    |----5. Scheduled Job Recommendations.vtt
+    |    |    |    |    |----6. PowerShell Job Options.mp4
+    |    |    |    |    |----6. PowerShell Job Options.vtt
+    |    |    |    |    |----7. Module Summary.mp4
+    |    |    |    |    |----7. Module Summary.vtt
+    |    |    |    |    |----8. Next Steps.mp4
+    |    |    |    |    |----8. Next Steps.vtt
+    |    |    |    |----exercise.zip
+    |    |    |    |----playlist.m3u
+    |    |    |    |----Read me.txt
+    |    |    |----en_VVN/
+    |    |    |    |----000000001/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |----000000002/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |----000000003/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |    |----000000005_v2_vvn.nghia
+    |    |    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |    |    |----000000006_v2_vvn.nghia
+    |    |    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |    |    |----000000007_v2_vvn.nghia
+    |    |    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |    |----000000004/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |    |----000000005_v2_vvn.nghia
+    |    |    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |    |    |----000000006_v2_vvn.nghia
+    |    |    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |    |    |----000000007_v2_vvn.nghia
+    |    |    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |    |    |----000000008_v2_vvn.nghia
+    |    |    |    |    |----000000008_vn2_nghia.mp4
+    |    |    |    |    |----000000009_v2_vvn.nghia
+    |    |    |    |    |----000000009_vn2_nghia.mp4
+    |    |    |    |    |----000000010_v2_vvn.nghia
+    |    |    |    |    |----000000010_vn2_nghia.mp4
+    |    |    |    |----000000005/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |    |----000000005_v2_vvn.nghia
+    |    |    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |    |    |----000000006_v2_vvn.nghia
+    |    |    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |    |    |----000000007_v2_vvn.nghia
+    |    |    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |    |    |----000000008_v2_vvn.nghia
+    |    |    |    |    |----000000008_vn2_nghia.mp4
+    |    |    |    |----exercise.zip
+    |    |    |    |----playlist.m3u
+    |    |    |    |----Read me.txt
+    |    |----_Windows_Registry/
+    |    |    |----en/
+    |    |    |    |----1. Course Overview/
+    |    |    |    |    |----1. Course Overview.mp4
+    |    |    |    |    |----1. Course Overview.vtt
+    |    |    |    |----2. Windows Registry Analysis Concepts/
+    |    |    |    |    |----1. Introduction.mp4
+    |    |    |    |    |----1. Introduction.vtt
+    |    |    |    |    |----2. Windows Registry Concepts.mp4
+    |    |    |    |    |----2. Windows Registry Concepts.vtt
+    |    |    |    |    |----3. Last Write Timestamp.mp4
+    |    |    |    |    |----3. Last Write Timestamp.vtt
+    |    |    |    |    |----4. Transaction Logs.mp4
+    |    |    |    |    |----4. Transaction Logs.vtt
+    |    |    |    |    |----5. Investigation Scenario.mp4
+    |    |    |    |    |----5. Investigation Scenario.vtt
+    |    |    |    |    |----6. Demo - Creating Clean Hives.mp4
+    |    |    |    |    |----6. Demo - Creating Clean Hives.vtt
+    |    |    |    |    |----7. Summary.mp4
+    |    |    |    |    |----7. Summary.vtt
+    |    |    |    |----3. Access Analysis within the Registry/
+    |    |    |    |    |----1. Introduction.mp4
+    |    |    |    |    |----1. Introduction.vtt
+    |    |    |    |    |----2. Evidence of Access.mp4
+    |    |    |    |    |----2. Evidence of Access.vtt
+    |    |    |    |    |----3. RegRipper.mp4
+    |    |    |    |    |----3. RegRipper.vtt
+    |    |    |    |    |----4. Demo - Extracting Registry Artifacts.mp4
+    |    |    |    |    |----4. Demo - Extracting Registry Artifacts.vtt
+    |    |    |    |    |----5. Demo - RecentDocs Key Analysis.mp4
+    |    |    |    |    |----5. Demo - RecentDocs Key Analysis.vtt
+    |    |    |    |    |----6. Demo - ShellBags Key Analysis.mp4
+    |    |    |    |    |----6. Demo - ShellBags Key Analysis.vtt
+    |    |    |    |    |----7. Demo - ShimCache Analysis.mp4
+    |    |    |    |    |----7. Demo - ShimCache Analysis.vtt
+    |    |    |    |    |----8. Summary.mp4
+    |    |    |    |    |----8. Summary.vtt
+    |    |    |    |----4. Execution Analysis within the Registry/
+    |    |    |    |    |----1. Introduction.mp4
+    |    |    |    |    |----1. Introduction.vtt
+    |    |    |    |    |----2. Evidence of Execution.mp4
+    |    |    |    |    |----2. Evidence of Execution.vtt
+    |    |    |    |    |----3. Demo - AmCache Analysis.mp4
+    |    |    |    |    |----3. Demo - AmCache Analysis.vtt
+    |    |    |    |    |----4. Demo - UserAssist Analysis.mp4
+    |    |    |    |    |----4. Demo - UserAssist Analysis.vtt
+    |    |    |    |    |----5. Summary.mp4
+    |    |    |    |    |----5. Summary.vtt
+    |    |    |    |----5. Persistence in the Registry/
+    |    |    |    |    |----1. Introduction.mp4
+    |    |    |    |    |----1. Introduction.vtt
+    |    |    |    |    |----2. Persistence in the Registry.mp4
+    |    |    |    |    |----2. Persistence in the Registry.vtt
+    |    |    |    |    |----3. Persistence Analysis Tools.mp4
+    |    |    |    |    |----3. Persistence Analysis Tools.vtt
+    |    |    |    |    |----4. Demo - Run Keys Analysis.mp4
+    |    |    |    |    |----4. Demo - Run Keys Analysis.vtt
+    |    |    |    |    |----5. Demo - Services Analysis.mp4
+    |    |    |    |    |----5. Demo - Services Analysis.vtt
+    |    |    |    |    |----6. Demo - Scheduled Tasks Analysis.mp4
+    |    |    |    |    |----6. Demo - Scheduled Tasks Analysis.vtt
+    |    |    |    |    |----7. Summary.mp4
+    |    |    |    |    |----7. Summary.vtt
+    |    |    |    |----6. Conclusion/
+    |    |    |    |    |----1. Introduction.mp4
+    |    |    |    |    |----1. Introduction.vtt
+    |    |    |    |    |----2. Investigation Recap.mp4
+    |    |    |    |    |----2. Investigation Recap.vtt
+    |    |    |    |    |----3. Summary.mp4
+    |    |    |    |    |----3. Summary.vtt
+    |    |    |    |----Read me.txt
+    |    |    |    |----specialized-difr-windows-registry-forensics.zip
+    |    |    |----en_VVN/
+    |    |    |    |----000000001/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |----000000002/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |    |----000000005_v2_vvn.nghia
+    |    |    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |    |    |----000000006_v2_vvn.nghia
+    |    |    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |    |    |----000000007_v2_vvn.nghia
+    |    |    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |    |----000000003/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |    |----000000005_v2_vvn.nghia
+    |    |    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |    |    |----000000006_v2_vvn.nghia
+    |    |    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |    |    |----000000007_v2_vvn.nghia
+    |    |    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |    |    |----000000008_v2_vvn.nghia
+    |    |    |    |    |----000000008_vn2_nghia.mp4
+    |    |    |    |----000000004/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |    |----000000005_v2_vvn.nghia
+    |    |    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |    |----000000005/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |    |----000000004_v2_vvn.nghia
+    |    |    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |    |    |----000000005_v2_vvn.nghia
+    |    |    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |    |    |----000000006_v2_vvn.nghia
+    |    |    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |    |    |----000000007_v2_vvn.nghia
+    |    |    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |    |----000000006/
+    |    |    |    |    |----000000001_v2_vvn.nghia
+    |    |    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |    |    |----000000002_v2_vvn.nghia
+    |    |    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |    |    |----000000003_v2_vvn.nghia
+    |    |    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |    |----Read me.txt
+    |    |    |    |----specialized-difr-windows-registry-forensics.zip
+    |----Video/
+    |    |----Udemy_Master_Python_and_GitHub_with_Real_World_Projects/
+    |    |    |----en/
+    |    |    |    |----1 - Introduction/
+    |    |    |    |    |----1 - Promo.mp4
+    |    |    |    |    |----2 - Course Resources.html
+    |    |    |    |    |----2 - MASTER-PYTHON-GITHUB.zip
+    |    |    |    |    |----3 - Anaconda and Conda.mp4
+    |    |    |    |    |----4 - Anaconda Installation Windows Mac.mp4
+    |    |    |    |    |----5 - Anaconda Installation Ubuntu Linux.mp4
+    |    |    |    |----10 - Import Modules/
+    |    |    |    |    |----50 - Section Overview.mp4
+    |    |    |    |    |----51 - Random.mp4
+    |    |    |    |    |----52 - Context Manager Files.mp4
+    |    |    |    |    |----53 - OS.mp4
+    |    |    |    |    |----54 - Datetime.mp4
+    |    |    |    |    |----55 - CSV Data.mp4
+    |    |    |    |    |----56 - Pickle and JSON Data.mp4
+    |    |    |    |----11 - Project Calculate Languages/
+    |    |    |    |    |----57 - Project Overview.mp4
+    |    |    |    |    |----58 - Calculating Language Percentages.mp4
+    |    |    |    |    |----59 - Data Visualization of Languages.mp4
+    |    |    |    |    |----60 - HOMEWORK.html
+    |    |    |    |----12 - Functions/
+    |    |    |    |    |----61 - Section Overview.mp4
+    |    |    |    |    |----62 - Functions.mp4
+    |    |    |    |    |----63 - Scope.mp4
+    |    |    |    |    |----64 - Lambda Expressions.mp4
+    |    |    |    |    |----65 - Args and Kwargs.mp4
+    |    |    |    |    |----7 - Functions Quiz.html
+    |    |    |    |----13 - Tkinter GUI apps/
+    |    |    |    |    |----66 - Section Overview.mp4
+    |    |    |    |    |----67 - Basics of Tkinter.mp4
+    |    |    |    |    |----68 - Inputs of Tkinter.mp4
+    |    |    |    |    |----69 - Managing Multiple Windows.mp4
+    |    |    |    |    |----70 - Handling Events with Bind.mp4
+    |    |    |    |    |----71 - Handling Images and Links.mp4
+    |    |    |    |    |----72 - Tabs and Frames.mp4
+    |    |    |    |    |----73 - Uploading Files List and Scrollbar.mp4
+    |    |    |    |    |----8 - Tkinter GUI Quiz Part 1.html
+    |    |    |    |----14 - Project GUI Python Editor app/
+    |    |    |    |    |----74 - Project Overview.mp4
+    |    |    |    |    |----75 - Adding Navbar and Buttons.mp4
+    |    |    |    |    |----76 - Adding Text Areas.mp4
+    |    |    |    |    |----77 - Updating Edit Functions.mp4
+    |    |    |    |    |----78 - Adding Scroll bars.mp4
+    |    |    |    |    |----79 - Opening Python files.mp4
+    |    |    |    |    |----80 - Running Python files.mp4
+    |    |    |    |    |----81 - Saving Python files.mp4
+    |    |    |    |    |----82 - Find and Replace Text.mp4
+    |    |    |    |    |----83 - Package GUI app optional.mp4
+    |    |    |    |    |----84 - HOMEWORK.html
+    |    |    |    |----15 - Modules and Packages Creating Modules/
+    |    |    |    |    |----11 - Tkinter GUI Quiz Part 2.html
+    |    |    |    |    |----85 - Section Overview.mp4
+    |    |    |    |    |----86 - Modules Part 1 name.mp4
+    |    |    |    |    |----87 - Modules Part 2 initpy.mp4
+    |    |    |    |    |----88 - Modules Part 3 package.mp4
+    |    |    |    |    |----89 - Modules Part 4 all.mp4
+    |    |    |    |----16 - Advanced Functions/
+    |    |    |    |    |----90 - Section Overview.mp4
+    |    |    |    |    |----91 - Type Hinting.mp4
+    |    |    |    |    |----92 - Decorator Fundamentals.mp4
+    |    |    |    |    |----93 - Decorator Practical.mp4
+    |    |    |    |    |----94 - Generators.mp4
+    |    |    |    |----17 - CLI Apps/
+    |    |    |    |    |----1 - CLI Test.html
+    |    |    |    |    |----95 - Section Overview.mp4
+    |    |    |    |    |----96 - CLI Part 1.mp4
+    |    |    |    |    |----97 - CLI Part 2.mp4
+    |    |    |    |----18 - CLI Encryption App/
+    |    |    |    |    |----100 - Encrypting Zipfiles.mp4
+    |    |    |    |    |----101 - Decrypting ZipFiles.mp4
+    |    |    |    |    |----102 - Converting to a CLI app.mp4
+    |    |    |    |    |----103 - Password for EncryptDecrypt.mp4
+    |    |    |    |    |----104 - HOMEWORK.html
+    |    |    |    |    |----98 - Project Overview.mp4
+    |    |    |    |    |----99 - Creating ZipFiles.mp4
+    |    |    |    |----19 - Handle Errors/
+    |    |    |    |    |----105 - Section Overview.mp4
+    |    |    |    |    |----106 - Try Except and Finally.mp4
+    |    |    |    |----2 - Jupyter Pip and Virtual Environments/
+    |    |    |    |    |----10 - Virtual Environments Ubuntu Linux.mp4
+    |    |    |    |    |----11 - Running Jupyter Ubuntu Linux.mp4
+    |    |    |    |    |----12 - Jupyter Notebook Overview.mp4
+    |    |    |    |    |----13 - Jupyter Lab Overview.mp4
+    |    |    |    |    |----6 - Pip and Conda Windows Mac.mp4
+    |    |    |    |    |----7 - Virtual Environments Windows Mac.mp4
+    |    |    |    |    |----8 - Running Jupyter Windows Mac.mp4
+    |    |    |    |    |----9 - Pip and Conda Ubuntu Linux.mp4
+    |    |    |    |----20 - SQLite for Beginners/
+    |    |    |    |    |----107 - Section Overview.mp4
+    |    |    |    |    |----108 - SQLite Installation Article.html
+    |    |    |    |    |----109 - Creating Database and Tables.mp4
+    |    |    |    |    |----110 - Inserting Invalid Data.mp4
+    |    |    |    |    |----111 - Inserting Data with Table Constraints.mp4
+    |    |    |    |    |----112 - CRUD Operations.mp4
+    |    |    |    |    |----113 - Joining Tables.mp4
+    |    |    |    |    |----114 - SQLite Queries.mp4
+    |    |    |    |    |----115 - Advanced SQLite Queries.mp4
+    |    |    |    |    |----116 - SQLite Cases.mp4
+    |    |    |    |    |----117 - Alter Add Rename and Drop.mp4
+    |    |    |    |    |----118 - SQLite Datetime Part 1.mp4
+    |    |    |    |    |----119 - SQLite Datetime Part 2.mp4
+    |    |    |    |    |----120 - Handling SQL Errors.mp4
+    |    |    |    |----21 - Project Basic ETL Extract Transform and Load with SQLite3/
+    |    |    |    |    |----121 - Project Overview.mp4
+    |    |    |    |    |----122 - Create Authors Table.mp4
+    |    |    |    |    |----123 - Extracting Data.mp4
+    |    |    |    |    |----124 - Transforming Data.mp4
+    |    |    |    |    |----125 - Loading Data.mp4
+    |    |    |    |    |----126 - HOMEWORK.html
+    |    |    |    |----22 - Project Speech to Text App/
+    |    |    |    |    |----127 - Project Overview.mp4
+    |    |    |    |    |----128 - Text to Speech.mp4
+    |    |    |    |    |----129 - Speech Recognition.mp4
+    |    |    |    |    |----130 - Comprehension for Calculating Total.mp4
+    |    |    |    |    |----131 - Saving Calculated Total.mp4
+    |    |    |    |    |----132 - Converting to Python Script.mp4
+    |    |    |    |    |----133 - HOMEWORK.html
+    |    |    |    |----23 - OOP Object Orientated Programming/
+    |    |    |    |    |----134 - Section Overview.mp4
+    |    |    |    |    |----135 - Classes and init.mp4
+    |    |    |    |    |----136 - Inheritance.mp4
+    |    |    |    |    |----137 - Composition.mp4
+    |    |    |    |    |----138 - Special Methods.mp4
+    |    |    |    |    |----139 - Encapsulation.mp4
+    |    |    |    |----24 - Project Local Anagram Module/
+    |    |    |    |    |----140 - Project Overview.mp4
+    |    |    |    |    |----141 - Anagram Logic.mp4
+    |    |    |    |    |----142 - Creating Anagram Class.mp4
+    |    |    |    |    |----143 - Creating a Local Module.mp4
+    |    |    |    |    |----144 - HOMEWORK.html
+    |    |    |    |----25 - Project PyPi/
+    |    |    |    |    |----145 - Project Overview.mp4
+    |    |    |    |    |----146 - PyPI Set up Package Part 1.mp4
+    |    |    |    |    |----147 - PyPI Create Package Part 2.mp4
+    |    |    |    |    |----148 - HOMEWORK.html
+    |    |    |    |----26 - Project Advanced ETL Extract Load and Transform with SQLite3/
+    |    |    |    |    |----149 - Project Overview.mp4
+    |    |    |    |    |----150 - Extracting Movie Data with Kaggle.mp4
+    |    |    |    |    |----151 - Columns with List Comprehension.mp4
+    |    |    |    |    |----152 - Loading Movie Data.mp4
+    |    |    |    |    |----153 - Transforming Movie Data.mp4
+    |    |    |    |    |----154 - ELT with OOP.mp4
+    |    |    |    |    |----155 - HOMEWORK.html
+    |    |    |    |----27 - Web Scraping/
+    |    |    |    |    |----156 - Section Overview.mp4
+    |    |    |    |    |----157 - Web Scraping Locally.mp4
+    |    |    |    |----28 - Project Web Scraping UK National Lotto/
+    |    |    |    |    |----158 - Project Overview.mp4
+    |    |    |    |    |----159 - Web Scraping Data Part 1.mp4
+    |    |    |    |    |----160 - Web Scraping Data Part 2.mp4
+    |    |    |    |    |----161 - Web Scraping Data Part 3.mp4
+    |    |    |    |    |----162 - HOMEWORK.html
+    |    |    |    |----3 - Git and Github/
+    |    |    |    |    |----14 - Section Overview.mp4
+    |    |    |    |    |----15 - Git Installation.mp4
+    |    |    |    |    |----16 - Git Commands.mp4
+    |    |    |    |    |----17 - Github and SSH Key.mp4
+    |    |    |    |    |----18 - Git Push and Pull.mp4
+    |    |    |    |    |----19 - Git Ignore.mp4
+    |    |    |    |    |----20 - Multiple SSH Keys Optional.mp4
+    |    |    |    |    |----21 - Git Branch and Merge.mp4
+    |    |    |    |    |----22 - Merge Conflict Local Part 1.mp4
+    |    |    |    |    |----23 - Merge Conflict Remote Part 2.mp4
+    |    |    |    |    |----24 - Git Clone and Forking.mp4
+    |    |    |    |----4 - PreProject for GitHub/
+    |    |    |    |    |----25 - PreProject Overview.mp4
+    |    |    |    |    |----26 - Creating a READMEmd Profile Part 1.mp4
+    |    |    |    |    |----26 - PROFILE-README.txt
+    |    |    |    |    |----27 - Creating a READMEmd Profile Part 2.mp4
+    |    |    |    |    |----28 - Creating a READMEmd Project.mp4
+    |    |    |    |----5 - Fundamentals/
+    |    |    |    |    |----29 - Section Overview.mp4
+    |    |    |    |    |----30 - Variables and Operators.mp4
+    |    |    |    |    |----31 - Strings and Formatting.mp4
+    |    |    |    |    |----32 - Indexing.mp4
+    |    |    |    |----6 - Data Structures/
+    |    |    |    |    |----33 - Section Overview.mp4
+    |    |    |    |    |----34 - Lists.mp4
+    |    |    |    |    |----35 - Dictionaries.mp4
+    |    |    |    |    |----36 - Tuples.mp4
+    |    |    |    |    |----37 - Sets.mp4
+    |    |    |    |    |----38 - Builtin Functions.mp4
+    |    |    |    |----7 - Control Flow and Loops/
+    |    |    |    |    |----39 - Section Overview.mp4
+    |    |    |    |    |----40 - Conditionals If Elif Else.mp4
+    |    |    |    |    |----41 - For Loops.mp4
+    |    |    |    |    |----42 - While Loops.mp4
+    |    |    |    |    |----43 - Break Pass Continue.mp4
+    |    |    |    |----8 - Project Guessing Game/
+    |    |    |    |    |----44 - Project Overview.mp4
+    |    |    |    |    |----45 - Guessing Number.mp4
+    |    |    |    |    |----46 - HOMEWORK.html
+    |    |    |    |----9 - Comprehension/
+    |    |    |    |    |----47 - Section Overview.mp4
+    |    |    |    |    |----48 - List Comprehension.mp4
+    |    |    |    |    |----49 - Dictionary Comprehension.mp4
+    |    |    |    |----Read me.txt
+    |    |----Udemy_The_Complete_Guide_Visual_Studio_Code_VSCode_2024_Edition/
+    |    |    |----en/
+    |    |    |    |----1 - Introduction/
+    |    |    |    |    |----1 - Introduction.mp4
+    |    |    |    |    |----2 - Course Manual.mp4
+    |    |    |    |    |----3 - Course materials.html
+    |    |    |    |    |----4 - VSCode installation.mp4
+    |    |    |    |----2 - VSCode features/
+    |    |    |    |    |----10 - Keyboard Shortcuts.mp4
+    |    |    |    |    |----11 - Status Bar Items.mp4
+    |    |    |    |    |----12 - File Search.mp4
+    |    |    |    |    |----13 - Terminal.mp4
+    |    |    |    |    |----14 - Debugging.mp4
+    |    |    |    |    |----15 - Tasks.mp4
+    |    |    |    |    |----16 - Git.mp4
+    |    |    |    |    |----17 - Container WSL and SSH Targets.mp4
+    |    |    |    |    |----18 - MultiRoot Workspace.mp4
+    |    |    |    |    |----19 - Code Navigation.mp4
+    |    |    |    |    |----20 - Formatter and Editor Style.mp4
+    |    |    |    |    |----21 - VSCode from the Command Line.mp4
+    |    |    |    |    |----22 - VSCode in the Browser.mp4
+    |    |    |    |    |----5 - Welcome Themes and Trusted Workspace.mp4
+    |    |    |    |    |----6 - Layout.mp4
+    |    |    |    |    |----7 - Extensions.mp4
+    |    |    |    |    |----8 - Settings.mp4
+    |    |    |    |    |----9 - Accounts and Profiles.mp4
+    |    |    |    |----3 - CC/
+    |    |    |    |    |----23 - Extensions and Settings.mp4
+    |    |    |    |    |----24 - CC Runner.mp4
+    |    |    |    |    |----25 - CC Config.mp4
+    |    |    |    |    |----26 - CMake Projects.mp4
+    |    |    |    |----4 - Python/
+    |    |    |    |    |----27 - Extensions and Settings.mp4
+    |    |    |    |    |----28 - Config Files.mp4
+    |    |    |    |----5 - Rust/
+    |    |    |    |    |----29 - Extensions and Settings.mp4
+    |    |    |    |    |----30 - Running and Debugging.mp4
+    |    |    |    |----6 - JavascriptTypescript/
+    |    |    |    |    |----31 - Extensions and Settings.mp4
+    |    |    |    |----7 - Conclusion/
+    |    |    |    |    |----32 - Conclusion.mp4
+    |    |    |    |    |----33 - Bonus Lecture.html
+    |    |    |    |----Read me.txt
+    |    |----Udemy_The_Complete_Visual_Studio_Code_Course/
+    |    |    |----en/
+    |    |    |    |----2 - Installation and Basic Set Up/
+    |    |    |    |    |----5 - Working with Multiple Files.mp4
+    |    |    |    |    |----6 - End of Section 2 Exercises.html
+    |    |    |    |----3 - Interface Layout and Terminal/
+    |    |    |    |    |----10 - Shortcuts Delete Duplicate Move Replace with Multiple Cursors.mp4
+    |    |    |    |    |----11 - End of Section 3 Exercises.html
+    |    |    |    |    |----7 - Editor Features Layout and File View.mp4
+    |    |    |    |    |----8 - Using a Terminal within VSCode.mp4
+    |    |    |    |    |----9 - Using Markdown in Files.mp4
+    |    |    |    |----4 - Customising VSCode including Themes/
+    |    |    |    |    |----12 - Font Size and Typeface.mp4
+    |    |    |    |    |----13 - Applying Themes and Wrapping Text.mp4
+    |    |    |    |    |----14 - Using Extensions to Apply Themes.mp4
+    |    |    |    |    |----15 - End of Section 4 Exercises.html
+    |    |    |    |----5 - Search and Replace in Large Codebases/
+    |    |    |    |    |----16 - How Why and When to Use the Search Function Intro to Replace.mp4
+    |    |    |    |    |----17 - Match Case Whole Word and Use in a Large Project.mp4
+    |    |    |    |    |----18 - Regular Expressions.mp4
+    |    |    |    |    |----19 - End of Section 5 Exercises.html
+    |    |    |    |----6 - Workflow Speedup Tips/
+    |    |    |    |    |----20 - Snippets Basic.mp4
+    |    |    |    |    |----21 - Snippets Type Options Selected Text.mp4
+    |    |    |    |    |----22 - Snippets Assign a Shortcut Key.mp4
+    |    |    |    |    |----23 - Alignment Format Selection Commenting Snippet Marketplace Plugins Intro.mp4
+    |    |    |    |    |----24 - End of Section 6 Exercises.html
+    |    |    |    |----7 - Installing and Using Extensions/
+    |    |    |    |    |----25 - Add Functionality with Extensions Code Spelling Todo Tree.mp4
+    |    |    |    |    |----26 - More Extensions Diff Excel Viewer.mp4
+    |    |    |    |    |----27 - Case study customizing extension settings Markdown Preview Enhanced.mp4
+    |    |    |    |    |----28 - End of Section 7 Exercises.html
+    |    |    |    |----8 - Folders and Profiles/
+    |    |    |    |    |----29 - Create New Windows and Add Folders.mp4
+    |    |    |    |    |----30 - Organise Your Projects with Profiles.mp4
+    |    |    |    |    |----31 - Sync settings with GitHub.mp4
+    |    |    |    |    |----32 - Functionality in GitHub Online VSCode Version github1scom.mp4
+    |    |    |    |    |----33 - End of Section 8 Exercises.html
+    |    |    |    |----9 - VSCode for HTML and CSS/
+    |    |    |    |    |----34 - Viewing HTML within VSCode Live Preview and Browser Live Server.mp4
+    |    |    |    |    |----35 - Viewing and Using HTML within your Workspace Emmet.mp4
+    |    |    |    |    |----36 - Viewing CSS Definitions and Roots CSS Peek.mp4
+    |    |    |    |    |----37 - Useful HTML workflow extensions HTML CSS Support HTMLBoilerplate Prettier.mp4
+    |    |    |    |    |----38 - End of Section 9 Exercises.html

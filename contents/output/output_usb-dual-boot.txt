@@ -1,0 +1,531 @@
+Name: usb-dual-boot
+
+
+----contents/
+    |----DDD/
+    |    |----1/
+    |    |    |----01. Welcome.srt
+    |    |    |----02. What will you learn in this course.srt
+    |    |    |----03. Who is the course for and prerequisites.srt
+    |    |    |----04. What is Domain-Driven Design.srt
+    |    |    |----05. What is a Domain.srt
+    |    |    |----06. Why you should learn and practice DDD.srt
+    |    |    |----07. The two parts of DDD.srt
+    |    |    |----08. Section Recap.srt
+    |    |    |----09. The domain we’ll be exploring.srt
+    |    |    |----10. The domain’s Ubiquitous Language.srt
+    |    |    |----11. Ubiquitous Language as a tool for detecting Domain Objects.srt
+    |    |    |----12. The domain’s invariants.srt
+    |    |    |----13. Enforcing invariants.srt
+    |    |    |----14. Creating the domain objects.srt
+    |    |    |----15. Invariants as Unit Tests.srt
+    |    |    |----16. Enforcing Invariants that rely on dependencies.srt
+    |    |    |----17. The Result Pattern.srt
+    |    |    |----18. Section Recap,.srt
+    |    |    |----19. What are Tactical Patterns.srt
+    |    |    |----20. What is Tactical Design.srt
+    |    |    |----21. Entities.srt
+    |    |    |----22. Implementing the Entity base class.srt
+    |    |    |----23. Value Objects.srt
+    |    |    |----24. Implementing the Value Object base class.srt
+    |    |    |----25. Aggregates.srt
+    |    |    |----26. Shifting the focus to Aggregates.srt
+    |    |    |----27. Implementing the Aggregate base class.srt
+    |    |    |----28. Structuring the Domain Layer around Aggregates.srt
+    |    |    |----29. Domain Services.srt
+    |    |    |----30. Factories.srt
+    |    |    |----31. Implementing a Static Factory Method.srt
+    |    |    |----32. Repositories.srt
+    |    |    |----33. Disconnected Domain Models.srt
+    |    |    |----34. Repositories and EF Core.srt
+    |    |    |----35. Implementing a Repository.srt
+    |    |    |----36. Section Recap2.srt
+    |    |    |----37. Accessing the Domain Layer via a web API.srt
+    |    |    |----38. A system without Domain Events.srt
+    |    |    |----39. Eventual Consistency.srt
+    |    |    |----40. What is a Domain Event.srt
+    |    |    |----41. The Domain Event Sausage Factory.srt
+    |    |    |----42. Implementing a Domain Event.srt
+    |    |    |----43. Section Recap3.srt
+    |    |    |----44. Domain Modeling & Analysis Paralysis.srt
+    |    |    |----45. Domain Model Identity Uniqueness.srt
+    |    |    |----46. Domain Object Deletion.srt
+    |    |    |----47. One Aggregate Per Transaction.srt
+    |    |    |----48. Reference Between Domain Models.srt
+    |    |    |----49. Section Recap.srt
+    |    |    |----50. Application Services vs Domain Services.srt
+    |    |    |----51. Transactional vs. Eventual Consistency.srt
+    |    |    |----52. Rich vs. Anemic Domain Models.srt
+    |    |    |----53. Always Valid vs. Not Always Valid.srt
+    |    |    |----54. Persistence Ignorance.srt
+    |    |    |----55. Section Recap4.srt
+    |    |    |----56. What is Strategic Design.srt
+    |    |    |----57. Sub-Domains.srt
+    |    |    |----58. The 3 types of Sub-Domains.srt
+    |    |    |----59. Context Mapping and Context Maps.srt
+    |    |    |----60. Context Map example.srt
+    |    |    |----61. Team Relationships.srt
+    |    |    |----62. Context Map Patterns.srt
+    |    |    |----63. Section Recap5.srt
+    |    |    |----64. Bounded Contexts.srt
+    |    |    |----65. Bounded Contexts vs. Sub-Domains (Problem vs. Solution Space).srt
+    |    |    |----66. Exploring our Domain’s Bounded Contexts.srt
+    |    |    |----67. Exploring relationships between our Bounded Contexts.srt
+    |    |    |----68. Defining our Context Map.srt
+    |    |    |----69. Section Recap6.srt
+    |    |    |----70. What are Integration Events.srt
+    |    |    |----71. The chain of Integration and Domain Events.srt
+    |    |    |----72. Using a Message Broker for distributing Integration Events.srt
+    |    |    |----73. Error handling when publishing Integration Events.srt
+    |    |    |----74. The Outbox Pattern.srt
+    |    |    |----75. The Integration Events Sausage Factory - Outbox Writer.srt
+    |    |    |----76. The Integration Events Sausage Factory - Integration Event Publisher.srt
+    |    |    |----77. The Integration Events Sausage Factory - Consuming Integration Events.srt
+    |    |    |----78. Section Recap7.srt
+    |    |    |----79. Course conclusion.srt
+    |    |    |----code.zip
+    |    |    |----Getting Started Domain-Driven Design.txt
+    |    |    |----Read me.txt
+    |    |----1_VVN/
+    |    |    |----000000001_v2_vvn.nghia
+    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |----000000002_v2_vvn.nghia
+    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |----000000003_v2_vvn.nghia
+    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |----000000004_v2_vvn.nghia
+    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |----000000005_v2_vvn.nghia
+    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |----000000006_v2_vvn.nghia
+    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |----000000007_v2_vvn.nghia
+    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |----000000008_v2_vvn.nghia
+    |    |    |----000000008_vn2_nghia.mp4
+    |    |    |----000000009_v2_vvn.nghia
+    |    |    |----000000009_vn2_nghia.mp4
+    |    |    |----000000010_v2_vvn.nghia
+    |    |    |----000000010_vn2_nghia.mp4
+    |    |    |----000000011_v2_vvn.nghia
+    |    |    |----000000011_vn2_nghia.mp4
+    |    |    |----000000012_v2_vvn.nghia
+    |    |    |----000000012_vn2_nghia.mp4
+    |    |    |----000000013_v2_vvn.nghia
+    |    |    |----000000013_vn2_nghia.mp4
+    |    |    |----000000014_v2_vvn.nghia
+    |    |    |----000000014_vn2_nghia.mp4
+    |    |    |----000000015_v2_vvn.nghia
+    |    |    |----000000015_vn2_nghia.mp4
+    |    |    |----000000016_v2_vvn.nghia
+    |    |    |----000000016_vn2_nghia.mp4
+    |    |    |----000000017_v2_vvn.nghia
+    |    |    |----000000017_vn2_nghia.mp4
+    |    |    |----000000018_v2_vvn.nghia
+    |    |    |----000000018_vn2_nghia.mp4
+    |    |    |----000000019_v2_vvn.nghia
+    |    |    |----000000019_vn2_nghia.mp4
+    |    |    |----000000020_v2_vvn.nghia
+    |    |    |----000000020_vn2_nghia.mp4
+    |    |    |----000000021_v2_vvn.nghia
+    |    |    |----000000021_vn2_nghia.mp4
+    |    |    |----000000022_v2_vvn.nghia
+    |    |    |----000000022_vn2_nghia.mp4
+    |    |    |----000000023_v2_vvn.nghia
+    |    |    |----000000023_vn2_nghia.mp4
+    |    |    |----000000024_v2_vvn.nghia
+    |    |    |----000000024_vn2_nghia.mp4
+    |    |    |----000000025_v2_vvn.nghia
+    |    |    |----000000025_vn2_nghia.mp4
+    |    |    |----000000026_v2_vvn.nghia
+    |    |    |----000000026_vn2_nghia.mp4
+    |    |    |----000000027_v2_vvn.nghia
+    |    |    |----000000027_vn2_nghia.mp4
+    |    |    |----000000028_v2_vvn.nghia
+    |    |    |----000000028_vn2_nghia.mp4
+    |    |    |----000000029_v2_vvn.nghia
+    |    |    |----000000029_vn2_nghia.mp4
+    |    |    |----000000030_v2_vvn.nghia
+    |    |    |----000000030_vn2_nghia.mp4
+    |    |    |----000000031_v2_vvn.nghia
+    |    |    |----000000031_vn2_nghia.mp4
+    |    |    |----000000032_v2_vvn.nghia
+    |    |    |----000000032_vn2_nghia.mp4
+    |    |    |----000000033_v2_vvn.nghia
+    |    |    |----000000033_vn2_nghia.mp4
+    |    |    |----000000034_v2_vvn.nghia
+    |    |    |----000000034_vn2_nghia.mp4
+    |    |    |----000000035_v2_vvn.nghia
+    |    |    |----000000035_vn2_nghia.mp4
+    |    |    |----000000036_v2_vvn.nghia
+    |    |    |----000000036_vn2_nghia.mp4
+    |    |    |----000000037_v2_vvn.nghia
+    |    |    |----000000037_vn2_nghia.mp4
+    |    |    |----000000038_v2_vvn.nghia
+    |    |    |----000000038_vn2_nghia.mp4
+    |    |    |----000000039_v2_vvn.nghia
+    |    |    |----000000039_vn2_nghia.mp4
+    |    |    |----000000040_v2_vvn.nghia
+    |    |    |----000000040_vn2_nghia.mp4
+    |    |    |----000000041_v2_vvn.nghia
+    |    |    |----000000041_vn2_nghia.mp4
+    |    |    |----000000042_v2_vvn.nghia
+    |    |    |----000000042_vn2_nghia.mp4
+    |    |    |----000000043_v2_vvn.nghia
+    |    |    |----000000043_vn2_nghia.mp4
+    |    |    |----000000044_v2_vvn.nghia
+    |    |    |----000000044_vn2_nghia.mp4
+    |    |    |----000000045_v2_vvn.nghia
+    |    |    |----000000045_vn2_nghia.mp4
+    |    |    |----000000046_v2_vvn.nghia
+    |    |    |----000000046_vn2_nghia.mp4
+    |    |    |----000000047_v2_vvn.nghia
+    |    |    |----000000047_vn2_nghia.mp4
+    |    |    |----000000048_v2_vvn.nghia
+    |    |    |----000000048_vn2_nghia.mp4
+    |    |    |----000000049_v2_vvn.nghia
+    |    |    |----000000049_vn2_nghia.mp4
+    |    |    |----000000050_v2_vvn.nghia
+    |    |    |----000000050_vn2_nghia.mp4
+    |    |    |----000000051_v2_vvn.nghia
+    |    |    |----000000051_vn2_nghia.mp4
+    |    |    |----000000052_v2_vvn.nghia
+    |    |    |----000000052_vn2_nghia.mp4
+    |    |    |----000000053_v2_vvn.nghia
+    |    |    |----000000053_vn2_nghia.mp4
+    |    |    |----000000054_v2_vvn.nghia
+    |    |    |----000000054_vn2_nghia.mp4
+    |    |    |----000000055_v2_vvn.nghia
+    |    |    |----000000055_vn2_nghia.mp4
+    |    |    |----000000056_v2_vvn.nghia
+    |    |    |----000000056_vn2_nghia.mp4
+    |    |    |----000000057_v2_vvn.nghia
+    |    |    |----000000057_vn2_nghia.mp4
+    |    |    |----000000058_v2_vvn.nghia
+    |    |    |----000000058_vn2_nghia.mp4
+    |    |    |----000000059_v2_vvn.nghia
+    |    |    |----000000059_vn2_nghia.mp4
+    |    |    |----000000060_v2_vvn.nghia
+    |    |    |----000000060_vn2_nghia.mp4
+    |    |    |----000000061_v2_vvn.nghia
+    |    |    |----000000061_vn2_nghia.mp4
+    |    |    |----000000062_v2_vvn.nghia
+    |    |    |----000000062_vn2_nghia.mp4
+    |    |    |----000000063_v2_vvn.nghia
+    |    |    |----000000063_vn2_nghia.mp4
+    |    |    |----000000064_v2_vvn.nghia
+    |    |    |----000000064_vn2_nghia.mp4
+    |    |    |----000000065_v2_vvn.nghia
+    |    |    |----000000065_vn2_nghia.mp4
+    |    |    |----000000066_v2_vvn.nghia
+    |    |    |----000000066_vn2_nghia.mp4
+    |    |    |----000000067_v2_vvn.nghia
+    |    |    |----000000067_vn2_nghia.mp4
+    |    |    |----000000068_v2_vvn.nghia
+    |    |    |----000000068_vn2_nghia.mp4
+    |    |    |----000000069_v2_vvn.nghia
+    |    |    |----000000069_vn2_nghia.mp4
+    |    |    |----000000070_v2_vvn.nghia
+    |    |    |----000000070_vn2_nghia.mp4
+    |    |    |----000000071_v2_vvn.nghia
+    |    |    |----000000071_vn2_nghia.mp4
+    |    |    |----000000072_v2_vvn.nghia
+    |    |    |----000000072_vn2_nghia.mp4
+    |    |    |----000000073_v2_vvn.nghia
+    |    |    |----000000073_vn2_nghia.mp4
+    |    |    |----000000074_v2_vvn.nghia
+    |    |    |----000000074_vn2_nghia.mp4
+    |    |    |----000000075_v2_vvn.nghia
+    |    |    |----000000075_vn2_nghia.mp4
+    |    |    |----000000076_v2_vvn.nghia
+    |    |    |----000000076_vn2_nghia.mp4
+    |    |    |----000000077_v2_vvn.nghia
+    |    |    |----000000077_vn2_nghia.mp4
+    |    |    |----000000078_v2_vvn.nghia
+    |    |    |----000000078_vn2_nghia.mp4
+    |    |    |----000000079_v2_vvn.nghia
+    |    |    |----000000079_vn2_nghia.mp4
+    |    |    |----code.zip
+    |    |    |----Getting Started Domain-Driven Design.txt
+    |    |    |----Read me.txt
+    |    |----2/
+    |    |    |----01. Welcome.srt
+    |    |    |----02. What will you learn in this course.srt
+    |    |    |----03. Who is the course for and prerequisites.srt
+    |    |    |----04. Designing Systems Following Domain-Driven Design.srt
+    |    |    |----05. Key Strategic and Tactical Practices.srt
+    |    |    |----06. Domain Discovery.srt
+    |    |    |----07. Domain Discovery Techniques.srt
+    |    |    |----08. Event Storming Sneak Peek.srt
+    |    |    |----09. Documenting Ubiquitous Language.srt
+    |    |    |----10. Documenting Invariants.srt
+    |    |    |----11. Section Recap.srt
+    |    |    |----12. What is Event Storming.srt
+    |    |    |----13. Event Storming Legend.srt
+    |    |    |----14. Types of Event Storming.srt
+    |    |    |----15. Big Picture Event Storming.srt
+    |    |    |----16. Gym Session Scheduling System Domain Overview.srt
+    |    |    |----17. Big Picture Event Storming In Action - Setup.srt
+    |    |    |----18. Round 1 - Chaotic Exploration.srt
+    |    |    |----19. Round 2 - Enforce the Timeline.srt
+    |    |    |----20. Round 3 - People & Systems.srt
+    |    |    |----21. Round 4 - Walkthrough & Reverse Narrative.srt
+    |    |    |----22. Round 5 - Arrow Voting.srt
+    |    |    |----23. Big Picture Event Storming Goals.srt
+    |    |    |----24. Section Recap2.srt
+    |    |    |----25. What is Process Modeling Event Storming.srt
+    |    |    |----26. Process Modeling - The Rules of the Game.srt
+    |    |    |----27. Process Modeling in Action - Setup.srt
+    |    |    |----28. Round 1 - Framing the Problem.srt
+    |    |    |----29. Round 2 - Rush to the Goal.srt
+    |    |    |----30. Round 3 - Fill in the Blanks.srt
+    |    |    |----31. Process Modeling Event Storming Goals.srt
+    |    |    |----32. Section Recap3.srt
+    |    |    |----33. Refresher - What are Domains & Sub-Domains.srt
+    |    |    |----34. Identifying Sub-Domains.srt
+    |    |    |----35. Classifying Sub-Domains.srt
+    |    |    |----36. Section Recap4.srt
+    |    |    |----37. Refresher - What are Bounded Contexts.srt
+    |    |    |----38. Reviewing Our Ubiquitous Language.srt
+    |    |    |----39. Reviewing Our Invariants.srt
+    |    |    |----40. Reviewing Our Sub-Domains.srt
+    |    |    |----41. How Bounded Contexts Affect Domain Models.srt
+    |    |    |----42. Defining Bounded Contexts.srt
+    |    |    |----43. Defining Our Bounded Contexts.srt
+    |    |    |----44. Section Recap5.srt
+    |    |    |----45. Refresher - What is Context Mapping.srt
+    |    |    |----46. Team Relationships.srt
+    |    |    |----47. Context Map Patterns.srt
+    |    |    |----48. Context Mapping In Action - Setup & Context.srt
+    |    |    |----49. Creating an Admin Profile.srt
+    |    |    |----50. Creating a Subscription.srt
+    |    |    |----51. Creating a Gym.srt
+    |    |    |----52. Creating a Room.srt
+    |    |    |----53. Creating a Session.srt
+    |    |    |----54. Creating a Participant Profile.srt
+    |    |    |----55. Reserving a Spot in a Session.srt
+    |    |    |----56. Context Mapping In Action - Conclusion.srt
+    |    |    |----57. Strategic Goals Alignment.srt
+    |    |    |----58. Section Recap6.srt
+    |    |    |----59. Refresher - What is the Tactical Phase.srt
+    |    |    |----60. Refresher - Tactical Patterns.srt
+    |    |    |----61. Tactical Phase Objectives.srt
+    |    |    |----62. Section Recap7.srt
+    |    |    |----63. Enforce Invariants.srt
+    |    |    |----64. Reference Aggregates By Id.srt
+    |    |    |----65. Update Aggregate via Aggregate Root.srt
+    |    |    |----66. Prefer Smaller Aggregates.srt
+    |    |    |----67. One Aggregate Per Transaction.srt
+    |    |    |----68. Use Eventual Consistency Outside the Boundary.srt
+    |    |    |----69. Maintain Aggregate Scope.srt
+    |    |    |----70. Aggregate Root Identity Uniqueness.srt
+    |    |    |----71. Private  Public.srt
+    |    |    |----72. Assess and Refactor.srt
+    |    |    |----73. Aggregate Design Steps.srt
+    |    |    |----74. Aggregate Design In Action - Step 1.srt
+    |    |    |----75. Aggregate Design In Action - Step 2.srt
+    |    |    |----76. Aggregate Design In Action - Step 3.srt
+    |    |    |----77. Aggregate Design In Action - Step 4 Setup.srt
+    |    |    |----78. Merging Aggregates in the User Management Context.srt
+    |    |    |----79. Merging Aggregates in the Gym Management Context.srt
+    |    |    |----80. Merging Aggregates in the Session Management Context - The Chain Effect of Merging Aggregates.srt
+    |    |    |----81. Merging Aggregates in the Session Management Context - Identifying Missing Domain Objects.srt
+    |    |    |----82. Merging Aggregates in the Session Management Context Continued.srt
+    |    |    |----83. Merging Aggregates in the Session Management Context - Propagating Data Across Bounded Contexts.srt
+    |    |    |----84. Merging Aggregates Across Bounded Contexts.srt
+    |    |    |----85. Merging Aggregates in the Session Management Context - Continued.srt
+    |    |    |----86. Aggregate Design Draft Reflection.srt
+    |    |    |----87. Merging Aggregates Based On Eventual Consistency Constraints.srt
+    |    |    |----88. Evolving Aggregate Design With Time or Refactoring Existing Aggregate Designs.srt
+    |    |    |----89. Converting Aggregate Design To Code.srt
+    |    |    |----90. Section Recap8.srt
+    |    |    |----91. Course Conclusion.srt
+    |    |    |----code.zip
+    |    |    |----Deep Dive Domain-Driven Design.txt
+    |    |    |----Read me.txt
+    |    |----2_VVN/
+    |    |    |----000000001_v2_vvn.nghia
+    |    |    |----000000001_vn2_nghia.mp4
+    |    |    |----000000002_v2_vvn.nghia
+    |    |    |----000000002_vn2_nghia.mp4
+    |    |    |----000000003_v2_vvn.nghia
+    |    |    |----000000003_vn2_nghia.mp4
+    |    |    |----000000004_v2_vvn.nghia
+    |    |    |----000000004_vn2_nghia.mp4
+    |    |    |----000000005_v2_vvn.nghia
+    |    |    |----000000005_vn2_nghia.mp4
+    |    |    |----000000006_v2_vvn.nghia
+    |    |    |----000000006_vn2_nghia.mp4
+    |    |    |----000000007_v2_vvn.nghia
+    |    |    |----000000007_vn2_nghia.mp4
+    |    |    |----000000008_v2_vvn.nghia
+    |    |    |----000000008_vn2_nghia.mp4
+    |    |    |----000000009_v2_vvn.nghia
+    |    |    |----000000009_vn2_nghia.mp4
+    |    |    |----000000010_v2_vvn.nghia
+    |    |    |----000000010_vn2_nghia.mp4
+    |    |    |----000000011_v2_vvn.nghia
+    |    |    |----000000011_vn2_nghia.mp4
+    |    |    |----000000012_v2_vvn.nghia
+    |    |    |----000000012_vn2_nghia.mp4
+    |    |    |----000000013_v2_vvn.nghia
+    |    |    |----000000013_vn2_nghia.mp4
+    |    |    |----000000014_v2_vvn.nghia
+    |    |    |----000000014_vn2_nghia.mp4
+    |    |    |----000000015_v2_vvn.nghia
+    |    |    |----000000015_vn2_nghia.mp4
+    |    |    |----000000016_v2_vvn.nghia
+    |    |    |----000000016_vn2_nghia.mp4
+    |    |    |----000000017_v2_vvn.nghia
+    |    |    |----000000017_vn2_nghia.mp4
+    |    |    |----000000018_v2_vvn.nghia
+    |    |    |----000000018_vn2_nghia.mp4
+    |    |    |----000000019_v2_vvn.nghia
+    |    |    |----000000019_vn2_nghia.mp4
+    |    |    |----000000020_v2_vvn.nghia
+    |    |    |----000000020_vn2_nghia.mp4
+    |    |    |----000000021_v2_vvn.nghia
+    |    |    |----000000021_vn2_nghia.mp4
+    |    |    |----000000022_v2_vvn.nghia
+    |    |    |----000000022_vn2_nghia.mp4
+    |    |    |----000000023_v2_vvn.nghia
+    |    |    |----000000023_vn2_nghia.mp4
+    |    |    |----000000024_v2_vvn.nghia
+    |    |    |----000000024_vn2_nghia.mp4
+    |    |    |----000000025_v2_vvn.nghia
+    |    |    |----000000025_vn2_nghia.mp4
+    |    |    |----000000026_v2_vvn.nghia
+    |    |    |----000000026_vn2_nghia.mp4
+    |    |    |----000000027_v2_vvn.nghia
+    |    |    |----000000027_vn2_nghia.mp4
+    |    |    |----000000028_v2_vvn.nghia
+    |    |    |----000000028_vn2_nghia.mp4
+    |    |    |----000000029_v2_vvn.nghia
+    |    |    |----000000029_vn2_nghia.mp4
+    |    |    |----000000030_v2_vvn.nghia
+    |    |    |----000000030_vn2_nghia.mp4
+    |    |    |----000000031_v2_vvn.nghia
+    |    |    |----000000031_vn2_nghia.mp4
+    |    |    |----000000032_v2_vvn.nghia
+    |    |    |----000000032_vn2_nghia.mp4
+    |    |    |----000000033_v2_vvn.nghia
+    |    |    |----000000033_vn2_nghia.mp4
+    |    |    |----000000034_v2_vvn.nghia
+    |    |    |----000000034_vn2_nghia.mp4
+    |    |    |----000000035_v2_vvn.nghia
+    |    |    |----000000035_vn2_nghia.mp4
+    |    |    |----000000036_v2_vvn.nghia
+    |    |    |----000000036_vn2_nghia.mp4
+    |    |    |----000000037_v2_vvn.nghia
+    |    |    |----000000037_vn2_nghia.mp4
+    |    |    |----000000038_v2_vvn.nghia
+    |    |    |----000000038_vn2_nghia.mp4
+    |    |    |----000000039_v2_vvn.nghia
+    |    |    |----000000039_vn2_nghia.mp4
+    |    |    |----000000040_v2_vvn.nghia
+    |    |    |----000000040_vn2_nghia.mp4
+    |    |    |----000000041_v2_vvn.nghia
+    |    |    |----000000041_vn2_nghia.mp4
+    |    |    |----000000042_v2_vvn.nghia
+    |    |    |----000000042_vn2_nghia.mp4
+    |    |    |----000000043_v2_vvn.nghia
+    |    |    |----000000043_vn2_nghia.mp4
+    |    |    |----000000044_v2_vvn.nghia
+    |    |    |----000000044_vn2_nghia.mp4
+    |    |    |----000000045_v2_vvn.nghia
+    |    |    |----000000045_vn2_nghia.mp4
+    |    |    |----000000046_v2_vvn.nghia
+    |    |    |----000000046_vn2_nghia.mp4
+    |    |    |----000000047_v2_vvn.nghia
+    |    |    |----000000047_vn2_nghia.mp4
+    |    |    |----000000048_v2_vvn.nghia
+    |    |    |----000000048_vn2_nghia.mp4
+    |    |    |----000000049_v2_vvn.nghia
+    |    |    |----000000049_vn2_nghia.mp4
+    |    |    |----000000050_v2_vvn.nghia
+    |    |    |----000000050_vn2_nghia.mp4
+    |    |    |----000000051_v2_vvn.nghia
+    |    |    |----000000051_vn2_nghia.mp4
+    |    |    |----000000052_v2_vvn.nghia
+    |    |    |----000000052_vn2_nghia.mp4
+    |    |    |----000000053_v2_vvn.nghia
+    |    |    |----000000053_vn2_nghia.mp4
+    |    |    |----000000054_v2_vvn.nghia
+    |    |    |----000000054_vn2_nghia.mp4
+    |    |    |----000000055_v2_vvn.nghia
+    |    |    |----000000055_vn2_nghia.mp4
+    |    |    |----000000056_v2_vvn.nghia
+    |    |    |----000000056_vn2_nghia.mp4
+    |    |    |----000000057_v2_vvn.nghia
+    |    |    |----000000057_vn2_nghia.mp4
+    |    |    |----000000058_v2_vvn.nghia
+    |    |    |----000000058_vn2_nghia.mp4
+    |    |    |----000000059_v2_vvn.nghia
+    |    |    |----000000059_vn2_nghia.mp4
+    |    |    |----000000060_v2_vvn.nghia
+    |    |    |----000000060_vn2_nghia.mp4
+    |    |    |----000000061_v2_vvn.nghia
+    |    |    |----000000061_vn2_nghia.mp4
+    |    |    |----000000062_v2_vvn.nghia
+    |    |    |----000000062_vn2_nghia.mp4
+    |    |    |----000000063_v2_vvn.nghia
+    |    |    |----000000063_vn2_nghia.mp4
+    |    |    |----000000064_v2_vvn.nghia
+    |    |    |----000000064_vn2_nghia.mp4
+    |    |    |----000000065_v2_vvn.nghia
+    |    |    |----000000065_vn2_nghia.mp4
+    |    |    |----000000066_v2_vvn.nghia
+    |    |    |----000000066_vn2_nghia.mp4
+    |    |    |----000000067_v2_vvn.nghia
+    |    |    |----000000067_vn2_nghia.mp4
+    |    |    |----000000068_v2_vvn.nghia
+    |    |    |----000000068_vn2_nghia.mp4
+    |    |    |----000000069_v2_vvn.nghia
+    |    |    |----000000069_vn2_nghia.mp4
+    |    |    |----000000070_v2_vvn.nghia
+    |    |    |----000000070_vn2_nghia.mp4
+    |    |    |----000000071_v2_vvn.nghia
+    |    |    |----000000071_vn2_nghia.mp4
+    |    |    |----000000072_v2_vvn.nghia
+    |    |    |----000000072_vn2_nghia.mp4
+    |    |    |----000000073_v2_vvn.nghia
+    |    |    |----000000073_vn2_nghia.mp4
+    |    |    |----000000074_v2_vvn.nghia
+    |    |    |----000000074_vn2_nghia.mp4
+    |    |    |----000000075_v2_vvn.nghia
+    |    |    |----000000075_vn2_nghia.mp4
+    |    |    |----000000076_v2_vvn.nghia
+    |    |    |----000000076_vn2_nghia.mp4
+    |    |    |----000000077_v2_vvn.nghia
+    |    |    |----000000077_vn2_nghia.mp4
+    |    |    |----000000078_v2_vvn.nghia
+    |    |    |----000000078_vn2_nghia.mp4
+    |    |    |----000000079_v2_vvn.nghia
+    |    |    |----000000079_vn2_nghia.mp4
+    |    |    |----000000080_v2_vvn.nghia
+    |    |    |----000000080_vn2_nghia.mp4
+    |    |    |----000000081_v2_vvn.nghia
+    |    |    |----000000081_vn2_nghia.mp4
+    |    |    |----000000082_v2_vvn.nghia
+    |    |    |----000000082_vn2_nghia.mp4
+    |    |    |----000000083_v2_vvn.nghia
+    |    |    |----000000083_vn2_nghia.mp4
+    |    |    |----000000084_v2_vvn.nghia
+    |    |    |----000000084_vn2_nghia.mp4
+    |    |    |----000000085_v2_vvn.nghia
+    |    |    |----000000085_vn2_nghia.mp4
+    |    |    |----000000086_v2_vvn.nghia
+    |    |    |----000000086_vn2_nghia.mp4
+    |    |    |----000000087_v2_vvn.nghia
+    |    |    |----000000087_vn2_nghia.mp4
+    |    |    |----000000088_v2_vvn.nghia
+    |    |    |----000000088_vn2_nghia.mp4
+    |    |    |----000000089_v2_vvn.nghia
+    |    |    |----000000089_vn2_nghia.mp4
+    |    |    |----000000090_v2_vvn.nghia
+    |    |    |----000000090_vn2_nghia.mp4
+    |    |    |----000000091_v2_vvn.nghia
+    |    |    |----000000091_vn2_nghia.mp4
+    |    |    |----code.zip
+    |    |    |----Deep Dive Domain-Driven Design.txt
+    |    |    |----Read me.txt

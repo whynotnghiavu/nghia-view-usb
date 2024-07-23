@@ -1,0 +1,726 @@
+Name: ssd-den
+
+
+----contents/
+    |----New folder (2)/
+    |    |----DoAn2Xong/
+    |    |    |----category/
+    |    |    |    |----src/
+    |    |    |    |    |----app.controller.ts
+    |    |    |    |    |----app.module.ts
+    |    |    |    |    |----app.service.ts
+    |    |    |    |    |----categories/
+    |    |    |    |    |    |----categories.controller.ts
+    |    |    |    |    |    |----categories.module.ts
+    |    |    |    |    |    |----categories.service.ts
+    |    |    |    |    |    |----dto/
+    |    |    |    |    |    |    |----create-category.dto.ts
+    |    |    |    |    |    |    |----update-category.dto.ts
+    |    |    |    |    |    |----entity/
+    |    |    |    |    |    |    |----category.entity.ts
+    |    |    |    |    |----main.ts
+    |    |    |    |    |----products/
+    |    |    |    |    |    |----dto/
+    |    |    |    |    |    |    |----create-product.dto.ts
+    |    |    |    |    |    |    |----search-product.dto.ts
+    |    |    |    |    |    |    |----update-product.dto.ts
+    |    |    |    |    |    |----entity/
+    |    |    |    |    |    |    |----product.entity.ts
+    |    |    |    |    |    |----products.controller.ts
+    |    |    |    |    |    |----products.module.ts
+    |    |    |    |    |    |----products.service.ts
+    |    |    |----doan2/
+    |    |    |    |----contents/
+    |    |    |    |    |----bao_cao_tien_do/
+    |    |    |    |    |    |----lan_1.pdf
+    |    |    |    |    |    |----lan_2.pdf
+    |    |    |    |    |----p001_doi_tuong_va_pham_vi_nghien_cuu.tex
+    |    |    |    |    |----p001_ly_do_chon_de_tai.tex
+    |    |    |    |    |----p001_tom_tat_noi_dung_do_an.tex
+    |    |    |    |    |----p1_hddt_cac_chuc_nang_thay_doi_so_voi_thuc_te_trong_do_an_nay.tex
+    |    |    |    |    |----p1_hddt_cac_chuc_nang_tong_quan_cua_bai_toan_chinh.tex
+    |    |    |    |    |----p1_hddt_cac_khai_niem_va_can_cu_phap_ly.tex
+    |    |    |    |    |----p1_hddt_chi_tiet_cac_chuc_nang_cua_bai_toan_chinh.tex
+    |    |    |    |    |----p1_hddt_tong_quan_ve_bai_toan_hoa_don_dien_tu.tex
+    |    |    |    |    |----p1_hddt_yeu_cau_nghiep_vu.tex
+    |    |    |    |    |----p1_hddt_yeu_cau_nghiep_vu_cua_bai_toan_phu.tex
+    |    |    |    |    |----p2_msa_gioi_thieu_ve_kien_truc_vi_dich_vu.tex
+    |    |    |    |    |----p2_msa_kien_truc_nguyen_khoi_monolithic_architecture.tex
+    |    |    |    |    |----p2_msa_kien_truc_vi_dich_vu_microservices_architecture.tex
+    |    |    |    |    |----p2_msa_mot_so_dac_diem_va_uu_diem_cua_kien_truc_vi_dich_vu.tex
+    |    |    |    |    |----p2_msa_mot_so_nhuoc_diem_va_thach_thuc_cua_kien_truc_vi_dich_vu.tex
+    |    |    |    |    |----p3_ddd_ban_do_boi_canh_context_maps.tex
+    |    |    |    |    |----p3_ddd_boi_canh_bi_gioi_han_bounded_context.tex
+    |    |    |    |    |----p3_ddd_cac_mau_chien_luoc_trong_thiet_ke_huong_mien.tex
+    |    |    |    |    |----p3_ddd_cac_mau_ky_thuat_trong_thiet_ke_huong_mien.tex
+    |    |    |    |    |----p3_ddd_chuyen_gia_mien_domain_expert.tex
+    |    |    |    |    |----p3_ddd_cot_loi_cua_thiet_ke_huong_mien.tex
+    |    |    |    |    |----p3_ddd_dinh_nghia_ve_mien_domain.tex
+    |    |    |    |    |----p3_ddd_doi_net_ve_thiet_ke_huong_mien_domain_driven_design.tex
+    |    |    |    |    |----p3_ddd_doi_tuong_gia_tri_value_objects.tex
+    |    |    |    |    |----p3_ddd_doi_tuong_mien_domain_object.tex
+    |    |    |    |    |----p3_ddd_doi_tuong_thuc_the_entities_objects.tex
+    |    |    |    |    |----p3_ddd_kho_luu_tru_repository.tex
+    |    |    |    |    |----p3_ddd_kien_truc_luc_giac_hexagon_architecture.tex
+    |    |    |    |    |----p3_ddd_kien_truc_phan_lop_layered_architecture.tex
+    |    |    |    |    |----p3_ddd_mien_dich_vu_domain_service.tex
+    |    |    |    |    |----p3_ddd_mien_phu_sub_domain.tex
+    |    |    |    |    |----p3_ddd_moi_quan_he_boi_canh_bi_gioi_han_bounded_context_relationships.tex
+    |    |    |    |    |----p3_ddd_mo_hinh_mien_domain_models.tex
+    |    |    |    |    |----p3_ddd_ngon_ngu_chung_ubiquitous_language.tex
+    |    |    |    |    |----p3_ddd_nha_may_factory.tex
+    |    |    |    |    |----p3_ddd_tich_hop_lien_tuc_continuous_integration.tex
+    |    |    |    |    |----p3_ddd_tim_hieu_ve_thiet_ke_huong_mien.tex
+    |    |    |    |    |----p3_ddd_tong_hop_aggregates.tex
+    |    |    |    |    |----_a.tex
+    |    |    |    |----DA2_20206205_VuVanNghia.pdf
+    |    |    |    |----pictures/
+    |    |    |    |    |----anh_khac_nhau_giua_kien_truc_nguyen_khoi_va_kien_truc_vi_dich_vu/
+    |    |    |    |    |    |----AnhKhacNhau_KienTrucNguyenKhoi_KienTrucViDichVu.png
+    |    |    |    |    |    |----ChuyenTu_KienTrucNguyenKhoi_Sang_KienTrucViDichVu2.jpg
+    |    |    |    |    |    |----ChuyenTu_KienTrucNguyenKhoi_Sang_KienTrucViDichVu3.png
+    |    |    |    |    |    |----main.jpg
+    |    |    |    |    |----baemin/
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |----cac_mau_chien_luoc/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----temp.png
+    |    |    |    |    |----cac_mau_ky_thuat/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----temp.png
+    |    |    |    |    |----cac_moi_quan_he_boi_canh_gioi_han/
+    |    |    |    |    |    |----cac_moi_quan_he_boi_canh_gioi_han.png
+    |    |    |    |    |----HUST_logo.png
+    |    |    |    |    |----moi_quan_he_bat_doi_xung/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |----mo_hinh_rieng_biet_separate_ways/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |----_/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_ap_dung_ban_do_boi_canh/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |    |----_ap_dung_ban_do_boi_canh.png
+    |    |    |    |    |----_baemin/
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |----_chuyen_doi_tu_kien_truc_nguyen_khoi_sang_kien_truc_vi_dich_vu/
+    |    |    |    |    |    |----_chuyen_doi_tu_kien_truc_nguyen_khoi_sang_kien_truc_vi_dich_vu.png
+    |    |    |    |    |----_da_ngon_ngu_va_csdl/
+    |    |    |    |    |    |----da_ngon_ngu_va_csdl/
+    |    |    |    |    |    |    |----data/
+    |    |    |    |    |    |    |    |----0ReactJS.png
+    |    |    |    |    |    |    |    |----1MongoDB.png
+    |    |    |    |    |    |    |    |----1NodeJS.png
+    |    |    |    |    |    |    |    |----2Go.png
+    |    |    |    |    |    |    |    |----2PostgreSQL.jpg
+    |    |    |    |    |    |    |    |----3Python.png
+    |    |    |    |    |    |    |    |----3SQLite.jpg
+    |    |    |    |    |    |    |    |----4Java.png
+    |    |    |    |    |    |    |    |----4MySQL.png
+    |    |    |    |    |    |    |    |----5CSharp.png
+    |    |    |    |    |    |    |    |----5SQLServer.png
+    |    |    |    |    |    |    |    |----download.png
+    |    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |----_dich_vu_nguoi_dung_nestjs_su_dung_kien_truc_luc_giac/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_hust/
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |----_ket_qua_tao_khong_thanh_cong_uuid/
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |----_ket_qua_tao_thanh_cong_uuid/
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |----_kien_truc_vi_dich_vu_cua_amazon/
+    |    |    |    |    |    |----kien_truc_vi_dich_vu_cua_amazon.png
+    |    |    |    |    |----_ngon_ngu_chung_duoc_su_dung_trong_toan_bo_he_thong/
+    |    |    |    |    |    |----_ngon_ngu_chung_duoc_su_dung_trong_toan_bo_he_thong.png
+    |    |    |    |    |----_so_do_xac_dinh_mien_phu/
+    |    |    |    |    |    |----_so_do_xac_dinh_mien_phu.png
+    |    |    |    |    |----_tong_quan_kien_truc_luc_giac/
+    |    |    |    |    |    |----DomainDrivenHexagon.png
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_tong_quan_ve_cot_loi_cua_thiet_ke_huong_mien/
+    |    |    |    |    |    |----_tong_quan_ve_cot_loi_cua_thiet_ke_huong_mien.png
+    |    |    |    |    |----_vi_du_ban_do_boi_canh_trong_1_ngan_hang/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |----_vi_du_dich_vu_may_chu_mo_open_host_service/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_vi_du_doi_tuong_gia_tri_value_objects/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_vi_du_doi_tuong_thuc_the_entities_objects/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_vi_du_lap_trinh_kho_luu_tru_repository/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_vi_du_mo_hinh_chong_do_vo_anti_corruption_layer/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_vi_du_mo_hinh_hat_nhan_chung_shared_kernel/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |----_vi_du_mo_hinh_tuan_thu_conformist/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_vi_du_ngon_ngu_duoc_xuat_ban_published_language/
+    |    |    |    |    |    |----main.drawio.png
+    |    |    |    |    |    |----main.excalidraw.png
+    |    |    |    |    |    |----main.png
+    |    |    |    |    |    |----map.drawio.png
+    |    |    |    |    |----_vi_du_ve_boi_canh_bi_gioi_han_trong_mot_ngan_hang/
+    |    |    |    |    |    |----_vi_du_ve_boi_canh_bi_gioi_han_trong_mot_ngan_hang.png
+    |    |    |    |    |----_vi_du_ve_jenkins_trong_cong_nghe_tich_hop_lien_tuc/
+    |    |    |    |    |    |----main.png
+    |    |    |----einvoice-system/
+    |    |    |    |----.github/
+    |    |    |    |    |----workflows/
+    |    |    |    |    |    |----main.yml
+    |    |    |    |----docker/
+    |    |    |    |    |----.env
+    |    |    |    |    |----browser.sh
+    |    |    |    |    |----docker-compose.yml
+    |    |    |    |    |----mysql/
+    |    |    |    |    |    |----.gitignore
+    |    |    |    |    |    |----init.sql
+    |    |    |    |    |    |----mysql.sh
+    |    |    |    |    |    |----var/
+    |    |    |    |    |    |    |----lib/
+    |    |    |    |    |    |    |    |----mysql/
+    |    |    |    |    |    |    |    |    |----binlog.000010
+    |    |    |    |----einvoice-system.code-workspace
+    |    |    |    |----microservices/
+    |    |    |    |    |----api-gateway/
+    |    |    |    |    |    |----.dockerignore
+    |    |    |    |    |    |----.eslintrc.js
+    |    |    |    |    |    |----.gitignore
+    |    |    |    |    |    |----.prettierrc
+    |    |    |    |    |    |----Dockerfile
+    |    |    |    |    |    |----nest-cli.json
+    |    |    |    |    |    |----package-lock.json
+    |    |    |    |    |    |----package.json
+    |    |    |    |    |    |----README.md
+    |    |    |    |    |    |----src/
+    |    |    |    |    |    |    |----app.module.ts
+    |    |    |    |    |    |    |----decorators/
+    |    |    |    |    |    |    |    |----tax-payer.decorator.ts
+    |    |    |    |    |    |    |----filters/
+    |    |    |    |    |    |    |    |----all-exception.filter.ts
+    |    |    |    |    |    |    |----interceptors/
+    |    |    |    |    |    |    |    |----exclude-value.interceptor.ts
+    |    |    |    |    |    |    |    |----tax-payer.interceptor.ts
+    |    |    |    |    |    |    |----main.ts
+    |    |    |    |    |    |    |----middlewares/
+    |    |    |    |    |    |    |    |----logging.middleware.ts
+    |    |    |    |    |    |    |----nats-client/
+    |    |    |    |    |    |    |    |----nats-client.module.ts
+    |    |    |    |    |    |    |----services/
+    |    |    |    |    |    |    |    |----invoice/
+    |    |    |    |    |    |    |    |    |----dtos/
+    |    |    |    |    |    |    |    |    |    |----create-new-invoice.dto.ts
+    |    |    |    |    |    |    |    |    |    |----create-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |----delete-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |----find-all-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |----find-one-invoice.dto.ts
+    |    |    |    |    |    |    |    |    |    |----find-one-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |----update-product.dto.ts
+    |    |    |    |    |    |    |    |    |----invoice.controller.ts
+    |    |    |    |    |    |    |    |    |----invoice.module.ts
+    |    |    |    |    |    |    |    |    |----product.controller.ts
+    |    |    |    |    |    |    |    |----report/
+    |    |    |    |    |    |    |    |    |----report.controller.ts
+    |    |    |    |    |    |    |    |    |----report.module.ts
+    |    |    |    |    |    |    |    |----user/
+    |    |    |    |    |    |    |    |    |----dtos/
+    |    |    |    |    |    |    |    |    |    |----change-password.dto.ts
+    |    |    |    |    |    |    |    |    |    |----delete-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |    |----login-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |    |----register-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |    |----request-reset-password.dto.ts
+    |    |    |    |    |    |    |    |    |    |----update-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |----user.controller.ts
+    |    |    |    |    |    |    |    |    |----user.module.ts
+    |    |    |    |    |    |----test/
+    |    |    |    |    |    |    |----app.e2e-spec.ts
+    |    |    |    |    |    |    |----jest-e2e.json
+    |    |    |    |    |    |----tsconfig.build.json
+    |    |    |    |    |    |----tsconfig.json
+    |    |    |    |    |----invoice-service/
+    |    |    |    |    |    |----.dockerignore
+    |    |    |    |    |    |----.eslintrc.js
+    |    |    |    |    |    |----.gitignore
+    |    |    |    |    |    |----.prettierrc
+    |    |    |    |    |    |----Dockerfile
+    |    |    |    |    |    |----nest-cli.json
+    |    |    |    |    |    |----package-lock.json
+    |    |    |    |    |    |----package.json
+    |    |    |    |    |    |----README.md
+    |    |    |    |    |    |----src/
+    |    |    |    |    |    |    |----app.module.ts
+    |    |    |    |    |    |    |----invoice/
+    |    |    |    |    |    |    |    |----core/
+    |    |    |    |    |    |    |    |    |----application/
+    |    |    |    |    |    |    |    |    |    |----commands/
+    |    |    |    |    |    |    |    |    |    |    |----create-new-invoice/
+    |    |    |    |    |    |    |    |    |    |    |    |----create-new-invoice.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----create-new-invoice.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----create-product/
+    |    |    |    |    |    |    |    |    |    |    |    |----create-product.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----create-product.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----delete-product/
+    |    |    |    |    |    |    |    |    |    |    |    |----delete-product.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----delete-product.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-activated-event/
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-activated-event.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-activated-event.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-deleted-event/
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-deleted-event.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-deleted-event.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered-event/
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered-event.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered-event.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-updated-event/
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-updated-event.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-updated-event.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----update-product/
+    |    |    |    |    |    |    |    |    |    |    |    |----update-product.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----update-product.command.ts
+    |    |    |    |    |    |    |    |    |    |----event-handlers/
+    |    |    |    |    |    |    |    |    |    |    |----invoice-created.event-handler.ts
+    |    |    |    |    |    |    |    |    |    |----invoice.application.ts
+    |    |    |    |    |    |    |    |    |    |----ports/
+    |    |    |    |    |    |    |    |    |    |    |----dataaccess/
+    |    |    |    |    |    |    |    |    |    |    |    |----repositories/
+    |    |    |    |    |    |    |    |    |    |    |    |    |----address.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----bank-detail.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----bank.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----invoice.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----product.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----tax-office.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----ward.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |----mailer/
+    |    |    |    |    |    |    |    |    |    |    |    |----mailer.port.ts
+    |    |    |    |    |    |    |    |    |    |    |----tct/
+    |    |    |    |    |    |    |    |    |    |    |    |----tct.port.ts
+    |    |    |    |    |    |    |    |    |    |----queries/
+    |    |    |    |    |    |    |    |    |    |    |----find-all-product/
+    |    |    |    |    |    |    |    |    |    |    |    |----find-all-product.query-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----find-all-product.query.ts
+    |    |    |    |    |    |    |    |    |    |    |----find-one-invoice/
+    |    |    |    |    |    |    |    |    |    |    |    |----find-one-invoice.query-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----find-one-invoice.query.ts
+    |    |    |    |    |    |    |    |    |    |    |----find-one-product/
+    |    |    |    |    |    |    |    |    |    |    |    |----find-one-product.query-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----find-one-product.query.ts
+    |    |    |    |    |    |    |    |    |    |    |----find-tax-payer/
+    |    |    |    |    |    |    |    |    |    |    |    |----find-tax-payer.query-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----find-tax-payer.query.ts
+    |    |    |    |    |    |    |    |    |----domain/
+    |    |    |    |    |    |    |    |    |    |----entities/
+    |    |    |    |    |    |    |    |    |    |    |----address.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.ts
+    |    |    |    |    |    |    |    |    |    |    |----buyer.ts
+    |    |    |    |    |    |    |    |    |    |    |----city.ts
+    |    |    |    |    |    |    |    |    |    |    |----district.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice-item.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice.ts
+    |    |    |    |    |    |    |    |    |    |    |----product.ts
+    |    |    |    |    |    |    |    |    |    |    |----seller.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.ts
+    |    |    |    |    |    |    |    |    |    |----events/
+    |    |    |    |    |    |    |    |    |    |    |----invoice-created.event.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-activated.event.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-deleted.event.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered.event.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-updated.event.ts
+    |    |    |    |    |    |    |    |    |    |----exceptions/
+    |    |    |    |    |    |    |    |    |    |    |----invoice.exception.ts
+    |    |    |    |    |    |    |    |    |    |----services/
+    |    |    |    |    |    |    |    |    |    |    |----encryption-email.service.ts
+    |    |    |    |    |    |    |    |    |    |    |----hash-password.service.ts
+    |    |    |    |    |    |    |    |    |    |    |----usb-token-authentication.service.ts
+    |    |    |    |    |    |    |    |    |    |----value-objects/
+    |    |    |    |    |    |    |    |    |    |    |----address-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----city-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----district-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----email.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice-item-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----money.ts
+    |    |    |    |    |    |    |    |    |    |    |----phone-number.ts
+    |    |    |    |    |    |    |    |    |    |    |----product-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-code.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-status.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward-id.ts
+    |    |    |    |    |    |    |    |----infrastructure/
+    |    |    |    |    |    |    |    |    |----dataaccess/
+    |    |    |    |    |    |    |    |    |    |----config/
+    |    |    |    |    |    |    |    |    |    |    |----database.config.ts
+    |    |    |    |    |    |    |    |    |    |----entities/
+    |    |    |    |    |    |    |    |    |    |    |----address.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----city.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----district.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice-item.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----product.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.entity.ts
+    |    |    |    |    |    |    |    |    |    |----mappers/
+    |    |    |    |    |    |    |    |    |    |    |----address.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----product.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.adapter.ts
+    |    |    |    |    |    |    |    |    |    |----repositories/
+    |    |    |    |    |    |    |    |    |    |    |----address.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----invoice.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----product.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |----seeders/
+    |    |    |    |    |    |    |    |    |    |    |----address.seeder.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.seeder.ts
+    |    |    |    |    |    |    |    |    |    |    |----data/
+    |    |    |    |    |    |    |    |    |    |    |    |----address.city.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----address.district.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----address.ward.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----bank.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-office.data.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.seeder.ts
+    |    |    |    |    |    |    |    |    |----invoice.infrastructure.ts
+    |    |    |    |    |    |    |    |    |----mailer/
+    |    |    |    |    |    |    |    |    |    |----adapters/
+    |    |    |    |    |    |    |    |    |    |    |----mailer.adapter.ts
+    |    |    |    |    |    |    |    |    |    |----config/
+    |    |    |    |    |    |    |    |    |    |    |----mailer.config.ts
+    |    |    |    |    |    |    |    |    |    |    |----templates/
+    |    |    |    |    |    |    |    |    |    |    |    |----invoice-created.hbs
+    |    |    |    |    |    |    |    |    |----tct/
+    |    |    |    |    |    |    |    |    |    |----adapters/
+    |    |    |    |    |    |    |    |    |    |    |----tct.adapter.ts
+    |    |    |    |    |    |    |    |----interface/
+    |    |    |    |    |    |    |    |    |----http/
+    |    |    |    |    |    |    |    |    |    |----controllers/
+    |    |    |    |    |    |    |    |    |    |    |----invoice.controller.ts
+    |    |    |    |    |    |    |    |    |    |    |----product.controller.ts
+    |    |    |    |    |    |    |    |    |    |----dtos/
+    |    |    |    |    |    |    |    |    |    |    |----create-new-invoice.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----create-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----delete-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----find-all-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----find-one-invoice.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----find-one-product.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----find-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----update-product.dto.ts
+    |    |    |    |    |    |    |    |    |----invoice.interface.ts
+    |    |    |    |    |    |    |    |    |----listener/
+    |    |    |    |    |    |    |    |    |    |----dtos/
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-activated.event.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-deleted.event.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered.event.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-updated.event.dto.ts
+    |    |    |    |    |    |    |    |    |    |----listener-event.ts
+    |    |    |    |    |    |    |    |----invoice.module.ts
+    |    |    |    |    |    |    |----main.ts
+    |    |    |    |    |    |----test/
+    |    |    |    |    |    |    |----app.e2e-spec.ts
+    |    |    |    |    |    |    |----jest-e2e.json
+    |    |    |    |    |    |----tsconfig.build.json
+    |    |    |    |    |    |----tsconfig.json
+    |    |    |    |    |----report-service/
+    |    |    |    |    |    |----.dockerignore
+    |    |    |    |    |    |----.eslintrc.js
+    |    |    |    |    |    |----.gitignore
+    |    |    |    |    |    |----.prettierrc
+    |    |    |    |    |    |----Dockerfile
+    |    |    |    |    |    |----nest-cli.json
+    |    |    |    |    |    |----package-lock.json
+    |    |    |    |    |    |----package.json
+    |    |    |    |    |    |----README.md
+    |    |    |    |    |    |----src/
+    |    |    |    |    |    |    |----app.module.ts
+    |    |    |    |    |    |    |----main.ts
+    |    |    |    |    |    |    |----report/
+    |    |    |    |    |    |    |    |----dto/
+    |    |    |    |    |    |    |    |    |----create-report.dto.ts
+    |    |    |    |    |    |    |    |    |----update-report.dto.ts
+    |    |    |    |    |    |    |    |----infrastructure/
+    |    |    |    |    |    |    |    |    |----dataaccess/
+    |    |    |    |    |    |    |    |    |    |----config/
+    |    |    |    |    |    |    |    |    |    |    |----database.config.ts
+    |    |    |    |    |    |    |    |    |    |----entities/
+    |    |    |    |    |    |    |    |    |    |    |----address.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----city.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----district.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----report.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.entity.ts
+    |    |    |    |    |    |    |    |    |    |----seeders/
+    |    |    |    |    |    |    |    |    |    |    |----address.seeder.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.seeder.ts
+    |    |    |    |    |    |    |    |    |    |    |----data/
+    |    |    |    |    |    |    |    |    |    |    |    |----address.city.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----address.district.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----address.ward.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----bank.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-office.data.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.seeder.ts
+    |    |    |    |    |    |    |    |----report.controller.ts
+    |    |    |    |    |    |    |    |----report.module.ts
+    |    |    |    |    |    |    |    |----report.service.ts
+    |    |    |    |    |    |----test/
+    |    |    |    |    |    |    |----app.e2e-spec.ts
+    |    |    |    |    |    |    |----jest-e2e.json
+    |    |    |    |    |    |----tsconfig.build.json
+    |    |    |    |    |    |----tsconfig.json
+    |    |    |    |    |----tct-demo/
+    |    |    |    |    |    |----.dockerignore
+    |    |    |    |    |    |----.eslintrc.js
+    |    |    |    |    |    |----.gitignore
+    |    |    |    |    |    |----.prettierrc
+    |    |    |    |    |    |----Dockerfile
+    |    |    |    |    |    |----nest-cli.json
+    |    |    |    |    |    |----package-lock.json
+    |    |    |    |    |    |----package.json
+    |    |    |    |    |    |----README.md
+    |    |    |    |    |    |----src/
+    |    |    |    |    |    |    |----app.controller.spec.ts
+    |    |    |    |    |    |    |----app.controller.ts
+    |    |    |    |    |    |    |----app.module.ts
+    |    |    |    |    |    |    |----app.service.spec.ts
+    |    |    |    |    |    |    |----app.service.ts
+    |    |    |    |    |    |    |----main.ts
+    |    |    |    |    |    |----test/
+    |    |    |    |    |    |    |----app.e2e-spec.ts
+    |    |    |    |    |    |    |----jest-e2e.json
+    |    |    |    |    |    |----tsconfig.build.json
+    |    |    |    |    |    |----tsconfig.json
+    |    |    |    |    |----user-service/
+    |    |    |    |    |    |----.dockerignore
+    |    |    |    |    |    |----.eslintrc.js
+    |    |    |    |    |    |----.gitignore
+    |    |    |    |    |    |----.prettierrc
+    |    |    |    |    |    |----Dockerfile
+    |    |    |    |    |    |----nest-cli.json
+    |    |    |    |    |    |----package-lock.json
+    |    |    |    |    |    |----package.json
+    |    |    |    |    |    |----README.md
+    |    |    |    |    |    |----src/
+    |    |    |    |    |    |    |----app.module.ts
+    |    |    |    |    |    |    |----main.ts
+    |    |    |    |    |    |    |----user/
+    |    |    |    |    |    |    |    |----core/
+    |    |    |    |    |    |    |    |    |----application/
+    |    |    |    |    |    |    |    |    |    |----commands/
+    |    |    |    |    |    |    |    |    |    |    |----change-password/
+    |    |    |    |    |    |    |    |    |    |    |    |----change-password.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----change-password.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----delete-tax-payer/
+    |    |    |    |    |    |    |    |    |    |    |    |----delete-tax-payer.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----delete-tax-payer.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----register-tax-payer/
+    |    |    |    |    |    |    |    |    |    |    |    |----register-tax-payer.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----register-tax-payer.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----register-usb-token/
+    |    |    |    |    |    |    |    |    |    |    |    |----register-usb-token.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----register-usb-token.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----update-tax-payer/
+    |    |    |    |    |    |    |    |    |    |    |    |----update-tax-payer.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----update-tax-payer.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----verify-email-tax-payer/
+    |    |    |    |    |    |    |    |    |    |    |    |----verify-email-tax-payer.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----verify-email-tax-payer.command.ts
+    |    |    |    |    |    |    |    |    |    |    |----verify-reset-password/
+    |    |    |    |    |    |    |    |    |    |    |    |----verify-reset-password.command-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----verify-reset-password.command.ts
+    |    |    |    |    |    |    |    |    |    |----event-handlers/
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-activated.event-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-deleted.event-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered.event-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-updated.event-handler.ts
+    |    |    |    |    |    |    |    |    |    |----ports/
+    |    |    |    |    |    |    |    |    |    |    |----dataaccess/
+    |    |    |    |    |    |    |    |    |    |    |    |----repositories/
+    |    |    |    |    |    |    |    |    |    |    |    |    |----address.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----bank-detail.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----bank.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----tax-office.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |    |    |----ward.repository.port.ts
+    |    |    |    |    |    |    |    |    |    |    |----mailer/
+    |    |    |    |    |    |    |    |    |    |    |    |----mailer.port.ts
+    |    |    |    |    |    |    |    |    |    |    |----publisher/
+    |    |    |    |    |    |    |    |    |    |    |    |----message-queue.port.ts
+    |    |    |    |    |    |    |    |    |    |    |----tct/
+    |    |    |    |    |    |    |    |    |    |    |    |----tct.port.ts
+    |    |    |    |    |    |    |    |    |    |----queries/
+    |    |    |    |    |    |    |    |    |    |    |----get-tax-payer-current/
+    |    |    |    |    |    |    |    |    |    |    |    |----get-tax-payer-current.query-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----get-tax-payer-current.query.ts
+    |    |    |    |    |    |    |    |    |    |    |----login-tax-payer/
+    |    |    |    |    |    |    |    |    |    |    |    |----login-tax-payer.query-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----login-tax-payer.query.ts
+    |    |    |    |    |    |    |    |    |    |    |----request-reset-password/
+    |    |    |    |    |    |    |    |    |    |    |    |----request-reset-password.query-handler.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----request-reset-password.query.ts
+    |    |    |    |    |    |    |    |    |    |----user.application.ts
+    |    |    |    |    |    |    |    |    |----domain/
+    |    |    |    |    |    |    |    |    |    |----entities/
+    |    |    |    |    |    |    |    |    |    |    |----address.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.ts
+    |    |    |    |    |    |    |    |    |    |    |----city.ts
+    |    |    |    |    |    |    |    |    |    |    |----district.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.ts
+    |    |    |    |    |    |    |    |    |    |----events/
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-activated.event.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-deleted.event.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered.event.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-updated.event.ts
+    |    |    |    |    |    |    |    |    |    |----exceptions/
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.exception.ts
+    |    |    |    |    |    |    |    |    |    |----services/
+    |    |    |    |    |    |    |    |    |    |    |----encryption-email.service.ts
+    |    |    |    |    |    |    |    |    |    |    |----hash-password.service.ts
+    |    |    |    |    |    |    |    |    |    |    |----usb-token-authentication.service.ts
+    |    |    |    |    |    |    |    |    |    |----value-objects/
+    |    |    |    |    |    |    |    |    |    |    |----address-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----city-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----district-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----email.ts
+    |    |    |    |    |    |    |    |    |    |    |----phone-number.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-code.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office-id.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer-status.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward-id.ts
+    |    |    |    |    |    |    |    |----infrastructure/
+    |    |    |    |    |    |    |    |    |----dataaccess/
+    |    |    |    |    |    |    |    |    |    |----config/
+    |    |    |    |    |    |    |    |    |    |    |----database.config.ts
+    |    |    |    |    |    |    |    |    |    |----entities/
+    |    |    |    |    |    |    |    |    |    |    |----address.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----city.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----district.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.entity.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.entity.ts
+    |    |    |    |    |    |    |    |    |    |----mappers/
+    |    |    |    |    |    |    |    |    |    |    |----address.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.adapter.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.adapter.ts
+    |    |    |    |    |    |    |    |    |    |----repositories/
+    |    |    |    |    |    |    |    |    |    |    |----address.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank-detail.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-payer.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |    |----ward.orm-repository.ts
+    |    |    |    |    |    |    |    |    |    |----seeders/
+    |    |    |    |    |    |    |    |    |    |    |----address.seeder.ts
+    |    |    |    |    |    |    |    |    |    |    |----bank.seeder.ts
+    |    |    |    |    |    |    |    |    |    |    |----data/
+    |    |    |    |    |    |    |    |    |    |    |    |----address.city.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----address.district.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----address.ward.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----bank.data.ts
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-office.data.ts
+    |    |    |    |    |    |    |    |    |    |    |----tax-office.seeder.ts
+    |    |    |    |    |    |    |    |    |----mailer/
+    |    |    |    |    |    |    |    |    |    |----adapters/
+    |    |    |    |    |    |    |    |    |    |    |----mailer.adapter.ts
+    |    |    |    |    |    |    |    |    |    |----config/
+    |    |    |    |    |    |    |    |    |    |    |----mailer.config.ts
+    |    |    |    |    |    |    |    |    |    |    |----templates/
+    |    |    |    |    |    |    |    |    |    |    |    |----request-reset-password.hbs
+    |    |    |    |    |    |    |    |    |    |    |    |----tax-payer-registered.hbs
+    |    |    |    |    |    |    |    |    |----queue/
+    |    |    |    |    |    |    |    |    |    |----adapters/
+    |    |    |    |    |    |    |    |    |    |    |----queue.adapter.ts
+    |    |    |    |    |    |    |    |    |    |----config/
+    |    |    |    |    |    |    |    |    |    |    |----queue.config.ts
+    |    |    |    |    |    |    |    |    |----tct/
+    |    |    |    |    |    |    |    |    |    |----adapters/
+    |    |    |    |    |    |    |    |    |    |    |----tct.adapter.ts
+    |    |    |    |    |    |    |    |    |----user.infrastructure.ts
+    |    |    |    |    |    |    |    |----interface/
+    |    |    |    |    |    |    |    |    |----http/
+    |    |    |    |    |    |    |    |    |    |----controllers/
+    |    |    |    |    |    |    |    |    |    |    |----user.controller.ts
+    |    |    |    |    |    |    |    |    |    |----dtos/
+    |    |    |    |    |    |    |    |    |    |    |----change-password.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----delete-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----get-tax-payer-current.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----login-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----register-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----register-usb-token.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----request-reset-password.dto.ts
+    |    |    |    |    |    |    |    |    |    |    |----update-tax-payer.dto.ts
+    |    |    |    |    |    |    |    |    |----user.interface.ts
+    |    |    |    |    |    |    |    |----user.module.ts
+    |    |    |    |    |    |----test/
+    |    |    |    |    |    |    |----app.e2e-spec.ts
+    |    |    |    |    |    |    |----jest-e2e.json
+    |    |    |    |    |    |----tsconfig.build.json
+    |    |    |    |    |    |----tsconfig.json
+    |    |    |    |----README.md
+    |    |    |    |----sau/
+    |    |    |    |    |----.dockerignore
+    |    |    |    |    |----class/
+    |    |    |    |    |----common.sh
+    |    |    |    |    |----format.py
+    |    |    |    |    |----format_gui.py
+    |    |    |    |    |----index.py
+    |    |    |    |    |----output.txt
+    |    |    |    |    |----vercel.json
